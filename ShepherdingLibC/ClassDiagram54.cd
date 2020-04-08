@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Globals" Collapsed="true">
+    <Position X="29.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Agents.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agent" Collapsed="true">
+    <Position X="1.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAR4QAAAAEACAAAEAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Agents.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SheepDogAgent" Collapsed="true">
+    <Position X="0.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAIAAIAyIAESAECAIBAkAAQAKCIQIAAIAAAABQgAAA=</HashCode>
+      <FileName>Agents.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SheepAgent" Collapsed="true">
+    <Position X="2.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAiAAAAABAIAgBAwAQABAAAQAIAAgAiIQQAQIAAAA=</HashCode>
+      <FileName>Agents.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Behavior" Collapsed="true">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQEAAAAAAAAAACAAABBAAQAAAgAAAAA=</HashCode>
+      <FileName>Behaviors.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BehaviorList" Collapsed="true">
+    <Position X="26" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behaviors.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RepulsionBehaviorM1" Collapsed="true">
+    <Position X="19.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Behaviors.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RepulsionBehaviorM2" Collapsed="true">
+    <Position X="2.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Behaviors.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AttractionBehavior" Collapsed="true">
+    <Position X="6" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAEAAAAAAAgAAAAA=</HashCode>
+      <FileName>Behaviors.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FollowingPreviousDirectionBehavior" Collapsed="true">
+    <Position X="10.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAIgAAAAA=</HashCode>
+      <FileName>Behaviors.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionAvoidanceFriends" Collapsed="true">
+    <Position X="17.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAABgAAAAA=</HashCode>
+      <FileName>Behaviors.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionAvoidanceOthers" Collapsed="true">
+    <Position X="19.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Behaviors.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionAvoidanceOpponents" Collapsed="true">
+    <Position X="3.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAABAAAAgAAAAA=</HashCode>
+      <FileName>Behaviors.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionAvoidanceStaticObstacles" Collapsed="true">
+    <Position X="21.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Behaviors.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CollisionAvoidanceDynamicObstacles" Collapsed="true">
+    <Position X="1.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Behaviors.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Jittering" Collapsed="true">
+    <Position X="8.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAgAAAAA=</HashCode>
+      <FileName>Behaviors.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Driving" Collapsed="true">
+    <Position X="12.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAQAAAAgAAAAA=</HashCode>
+      <FileName>Behaviors.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Collecting" Collapsed="true">
+    <Position X="15" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAIAAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Behaviors.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Environment" Collapsed="true">
+    <Position X="26" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAoBgAAAAAAARCAAEAAIBAAgAQAAAAUAAggAABJAIAA=</HashCode>
+      <FileName>Environment.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SheepFlock" Collapsed="true">
+    <Position X="29.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAIAAAAAAIAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Flock.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SheepDogFlock" Collapsed="true">
+    <Position X="27.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAIAAAAAAAAACAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Flock.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SheepList" Collapsed="true">
+    <Position X="24.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Flock.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obstacle" Collapsed="true">
+    <Position X="3" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Terrain.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StaticObstacle" Collapsed="true">
+    <Position X="0.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Terrain.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DynamicObstacle" Collapsed="true">
+    <Position X="3" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Terrain.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fence" Collapsed="true">
+    <Position X="5.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Terrain.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StaticObstaclesList" Collapsed="true">
+    <Position X="26" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Terrain.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DynamicObstaclesList" Collapsed="true">
+    <Position X="24.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Terrain.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FencesList" Collapsed="true">
+    <Position X="27.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Terrain.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Communication" Collapsed="true">
+    <Position X="29.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Terrain.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Atmosphere" Collapsed="true">
+    <Position X="24.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Terrain.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Terrain" Collapsed="true">
+    <Position X="27.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACBAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Terrain.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhysicalTraits" Collapsed="true">
+    <Position X="26" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQ=</HashCode>
+      <FileName>Traits.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CognitiveTraits" Collapsed="true">
+    <Position X="27.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Traits.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PersonalityTraits" Collapsed="true">
+    <Position X="24.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Traits.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Traits" Collapsed="true">
+    <Position X="29.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAIAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Traits.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Vector2&lt;T&gt;" Collapsed="true">
+    <Position X="6.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAARAAAAQEQIAQAAAAABAIAAAABgAAAAAAA=</HashCode>
+      <FileName>Vector2.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Typedef Name="Vector2f" Collapsed="true">
+    <Position X="7.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vector2.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="Vector2d" Collapsed="true">
+    <Position X="6.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vector2.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

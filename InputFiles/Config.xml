@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConfigurationFile>
+<config category="Reproducibility">
+<RandomSeed>0 </RandomSeed>
+</config>
+  <config category="Visualisation">
+  <!--Use 1 for Visualisation ON, and 0 for Visualisation OFF -->
+    <Visualisation>1</Visualisation>
+  </config>
+<config category="Field Configurations">
+<FieldWidth>50</FieldWidth>
+<!--Field length and width in simulation units (not pixel units)-->
+<WindowMarginSize>10</WindowMarginSize>
+<!--// Not in use if Visualisation is OFF -->
+<!--WindowMarginSize in simulation unit. This variable represents how many units are added as margins before scaling the simulation unit to pixel units-->
+<!--This allows the user to see the surrounding of the shepherding field. Will be needed when a fence is added to the field-->
+</config>
+<config category="Goal Location relevant to the field">
+<x>25</x>
+<y>50</y>
+</config>
+<config category="Paddock Dimension">
+<!-- Paddock will be created as a square centred around the goal location-->
+<PaddockON> 0 </PaddockON>
+<!-- Use 1 to enable the use of paddock, and 0 to disable it.  -->
+<GoalRadius> 10 </GoalRadius>
+<!-- If paddock is disabled, then GoalRadius parameter will be used as the accepted distance to the goal to consider the sheep atGoal -->
+<Length>30</Length>
+<Width>30</Width>
+</config>
+<config category="Shepherding Model Configuration">
+<!-- for Strombom model set the following parameters as :  DrivingPositionEq=0,CollectingPositionEq=0,fNequation=0,CircularPathPlanningON=0,SheepNeignborhoodSelection=0,ForceRegulated=0,StallingON=1,StallingDistance= numeric value equal to 3*Ra_pi_pi. ModulationDecayFactor,R2, and R3, are not used in strombom, any values will not affect the model  -->
+<!-- for Our model set the following parameters as :  DrivingPositionEq=1,CollectingPositionEq=1,fNequation=1, CircularPathPlanningON=1,SheepNeignborhoodSelection=1,ForceRegulated=1,StallingON=0, set R2 to a small integer value, R3 need to be greater than fn : R3 <(Ra_pi_pi*sqrt(2N)), ModulationDecayFactor is suggested to be 2 to 4 -->
+<DrivingPositionEq> 1 </DrivingPositionEq>
+<!--0 refers to setting the driving location to (Ra_pi_pi*sqrt(N)) unit behind the flock, 1 refers to (R1 + R2) unit behind the flock -->
+<CollectingPositionEq>1</CollectingPositionEq>
+<!--0 refers to setting the collecting location to (Ra_pi_pi) unit behind the flock, 1 refers to (R2) unit behind the flock -->
+<fNequation>1</fNequation>
+<!--0 refers to setting fn=Ra_pi_pi*Power(N,2/3), 1 refers to setting fn=Ra_pi_pi*sqrt(2N)-->
+<StallingON>0</StallingON>
+<!--1 refers to On, setting the sheepdog speed to zero if within distance, 0 to disable it -->
+<StallingDistance>6</StallingDistance> 
+<!-- Specify the stalling distance, in Strombom model, 3Ra -->
+<CircularPathPlanningON>1</CircularPathPlanningON>
+<!--Use 1 to enable the path planning, and zero to disable it-->
+<SheepNeignborhoodSelection>1</SheepNeignborhoodSelection>
+<!--0 refers to setting the Sheep Neignborhood Selection to be based on number of sheep using parameter (card_Omega_pi_pi) , and 1  refers to to using distance range using parameter (Rs_pi_pi) -->
+<R3>10</R3>
+<!--R3 define the length of the influencing distance for the sheepdog. if the sheepDog beyond R2+R3 it has no effect on the sheep  -->
+<R2>4</R2>
+<!--R2 defines the minimum distance that sheepdog need to keep from any sheep while influencing   -->
+<ForceRegulated>1</ForceRegulated>
+<!-- 0 refers to disable force regulation, 1 to enable it -->
+<ModulationDecayFactor>2</ModulationDecayFactor>
+<!-- ModulationDecayFactor defines how fast changing the distance between the two agents reduce the force. The value used for M1 equation exp(- ModulationDecayFactor * (d/(Dmax-Dmin)) )-->
+</config>
+<config category="Shepherding Parameters">
+<N> 100</N>
+<!--N=(1:201)			& Cardinality of Pi , Don't forget to update cardinalities of sheep and sheepdog accordingly-->
+<M> 2 </M>
+<!-- (1:20)             & Cardinality of B-->
+<R_pi_beta> 65</R_pi_beta>
+<!-- (65u)				& pi sensing range for beta-->
+<Ra_pi_pi> 0.4</Ra_pi_pi>
+<!-- (2u)				& pi collision avoidance range for pi-->
+<Rs_pi_pi> 3</Rs_pi_pi>
+<!-- (20u)				& pi sensing range for pi-->
+<card_Omega_pi_pi> 9 </card_Omega_pi_pi>
+<!--maximum N-1			& size of sheep considered to be neighbors at any time step -->
+<card_Omega_beta_pi>  10 </card_Omega_beta_pi>
+<!--maximum N			& size of sheep a sheepDog agent operate on at any time step -->
+<W_pi_pi> 2</W_pi_pi>
+<!-- (2)				& pi repulsion strength from pi-->
+<W_pi_beta> 1</W_pi_beta>
+<!-- (1)				& pi repulsion strength from beta-->
+<W_pi_Lambda> 1.05</W_pi_Lambda>
+<!-- (1.05)				& pi attraction strength to Lambda-->
+<W_pi_upsilon> 0.5 </W_pi_upsilon>
+<!-- (0.5)				& Strength of pi previous direction-->
+<W_e_pi_i> 0.3</W_e_pi_i>
+<!-- (0.3)				& Strength of sheep pi_j angular noise-->
+<W_e_beta_j> 0.3</W_e_beta_j>
+<!--(0.3)				& Strength of shepherd beta_j angular noise-->
+<S_t_beta_j> 2.0</S_t_beta_j>
+<!--					& Speed of beta at time t-->
+<eta>   0.05</eta>
+<!--(0.05)				& Probability of moving per time step while grazing\-->
+<R_beta_beta> 2</R_beta_beta>
+<!-- (2)				& beta sensing range for beta-->
+<W_beta_beta> 0.5</W_beta_beta>
+<!-- (2)				& beta repulsion strength from another beta-->
+</config>
+<config category="Sheep Initialization">
+<SheepInitializationStartingX>20</SheepInitializationStartingX>
+<!--Sheep Initialization Rectangle starting x -->
+<SheepInitializationStartingY>20</SheepInitializationStartingY>
+<!--Sheep Initialization Rectangle starting Y -->
+<SheepInitializationXRange>10</SheepInitializationXRange>
+<!--Sheep Initialization Rectangle x range -->
+<SheepInitializationYRange>10</SheepInitializationYRange>
+<!--Sheep Initialization Rectangle y range -->
+<SheepInitializationPattern>P1</SheepInitializationPattern>
+<!--Sheep Initialization Pattern within this rectangle P1,P2,P3,P4,P5,P6 -->
+</config>
+<config category="SheepDog Initialization">
+<SheepDogInitializationStartingX>15</SheepDogInitializationStartingX>
+<!--Sheep Initialization Rectangle starting x -->
+<SheepDogInitializationStartingY>45</SheepDogInitializationStartingY>
+<!--Sheep Initialization Rectangle starting Y -->
+<SheepDogInitializationXRange>20</SheepDogInitializationXRange>
+<!--Sheep Initialization Rectangle x range -->
+<SheepDogInitializationYRange>5</SheepDogInitializationYRange>
+<!--Sheep Initialization Rectangle y range -->
+</config>
+<config category="Maximum Number of Steps">
+<maximumSteps>8000</maximumSteps>
+<!--Maximum Number of steps before simulation is terminated off -->
+</config>
+<config category="obstacle">
+<Density>0.001</Density>
+<!--Total area of obstacles per the total area of the field -->
+<Radius> 1 </Radius>
+<!-- The size of the radius (per unit) of a single obstacle -->
+	</config>
+</ConfigurationFile>
