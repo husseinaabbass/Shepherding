@@ -57,7 +57,7 @@
 <config category="Shepherding Parameters">
 <N> 100</N>
 <!--N=(1:201)			& Cardinality of Pi , Don't forget to update cardinalities of sheep and sheepdog accordingly-->
-<M> 2 </M>
+<M> 1 </M>
 <!-- (1:20)             & Cardinality of B-->
 <R_pi_beta> 65</R_pi_beta>
 <!-- (65u)				& pi sensing range for beta-->
@@ -65,9 +65,9 @@
 <!-- (2u)				& pi collision avoidance range for pi-->
 <Rs_pi_pi> 3</Rs_pi_pi>
 <!-- (20u)				& pi sensing range for pi-->
-<card_Omega_pi_pi> 9 </card_Omega_pi_pi>
+<card_Omega_pi_pi> 99 </card_Omega_pi_pi>
 <!--maximum N-1			& size of sheep considered to be neighbors at any time step -->
-<card_Omega_beta_pi>  10 </card_Omega_beta_pi>
+<card_Omega_beta_pi>  100 </card_Omega_beta_pi>
 <!--maximum N			& size of sheep a sheepDog agent operate on at any time step -->
 <W_pi_pi> 2</W_pi_pi>
 <!-- (2)				& pi repulsion strength from pi-->
@@ -86,7 +86,9 @@
 <eta>   0.05</eta>
 <!--(0.05)				& Probability of moving per time step while grazing\-->
 <R_beta_beta> 2</R_beta_beta>
-<!-- (2)				& beta sensing range for beta-->
+<!-- (2)				& beta sensing range for beta for collision avoidance-->
+<R_beta_pi> 20</R_beta_pi>
+<!-- (65)				& beta sensing range for pi-->
 <W_beta_beta> 0.5</W_beta_beta>
 <!-- (2)				& beta repulsion strength from another beta-->
 </config>
@@ -113,13 +115,13 @@
 <!--Sheep Initialization Rectangle y range -->
 </config>
 <config category="Maximum Number of Steps">
-<maximumSteps>8000</maximumSteps>
+<maximumSteps>1000</maximumSteps>
 <!--Maximum Number of steps before simulation is terminated off -->
 </config>
 <config category="obstacle">
-<Density>0.001</Density>
-<!--Total area of obstacles per the total area of the field -->
-<Radius> 1 </Radius>
+<Density>0.0</Density>
+		<!--Total area of obstacles per the total area of the field -->
+		<Radius> 1 </Radius>
 <!-- The size of the radius (per unit) of a single obstacle -->
 	</config>
 </ConfigurationFile>

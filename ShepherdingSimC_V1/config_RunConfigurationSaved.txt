@@ -1,0 +1,52 @@
+Random Numbers Seed : 0
+Visualisation : 0
+Simulation Speed: 100
+ScreenWidth in Pixels: 800
+Screen Height in Pixels: 800
+Field Length and Width: 100
+Goal LocationX: 0
+Goal LocationT: 0
+Paddock On : 0
+Paddock Length: 20
+paddock Width: 20
+Goal Radius: 10
+N: 10
+M: 1
+R_pi_beta: 65
+Ra_pi_pi: 2
+Rs_pi_pi: 20
+card_Omega_pi_pi: 9
+card_Omega_beta_pi: 10
+W_pi_pi: 2
+W_pi_beta: 1
+W_pi_Lambda: 1.05
+W_pi_upsilon: 0.5
+W_e_pi_i: 0.3
+W_e_beta_j: 0.3
+S_t_beta_j: 2
+eta: 0.05
+R_beta_beta: 10
+R_beta_pi: 65
+W_beta_beta: 2
+DrivingPositionEq1
+CollectingPositionEq1
+fNequation1
+Circular Path Planning On : 0
+StallingON : 0
+StallingDistance : 0
+ForceRegulated1
+SheepNeignborhoodSelection1
+ModulationDecayFactor1
+R2 : 4
+R3 : 4
+sheepInitializationStartingX: 0
+sheepInitializationStartingX: 0
+sheepInitializationXRange: 0
+sheepInitializationYRange: 0
+sheepInitializationPattern: 
+sheepDogInitializationStartingX: 0
+sheepDogInitializationStartingY: 0
+sheepDogInitializationXRange: 0
+sheepDogInitializationYRange: 0
+ObstaclesDensity: 0
+ObstaclesRadius: 1

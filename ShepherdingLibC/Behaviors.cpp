@@ -2,6 +2,8 @@
 #include "Behaviors.h"
 #include "Environment.h"
 #include "Agents.h"
+#include "SheepDogAgent.h"
+
 #include "Flock.h"
 //#include <typeinfo>
 #include <algorithm>
@@ -55,6 +57,70 @@ AttractionBehavior::AttractionBehavior(Agent * agent)
 	this->behaviorType = "AttractionBehavior";
 }
 
+
+Vector2f Covering::GetForce()
+{
+		Vector2f coveringForce = Vector2f();
+
+
+		Vector2f coveringPosition = GetNextCoveringPosition();
+		
+		//this->agent->P_beta_j_d_t = drivingPosition;
+		if ((coveringPosition.x == 0) && (coveringPosition.y == 0)) // Not Covering, coveringForce set to Zero.. Needs to be updated based on a decision not value
+		{
+			this->magnitude = 0;
+		}
+		else
+		{
+			coveringForce = (coveringPosition - this->agent->position_t) / coveringPosition.dist(this->agent->position_t);
+			this->magnitude = coveringPosition.dist(this->agent->position_t);
+
+		}
+
+
+
+
+
+		return coveringForce;
+}
+
+float Covering::GetMagnitude()
+{
+	return 0.0f;
+}
+
+Covering::Covering(Agent* agent)
+{
+	this->Weight = 1;
+	this->agent = agent;
+	this->behaviorType = "Covering";
+}
+
+Vector2f Covering::GetNextCoveringPosition()
+{
+	Vector2f coveringPosition = Vector2f();
+	
+	SheepList sheepOutOfFlock = SenseSheepOutOfFlock(this->agent, env);
+
+	if (env.openCoveringTask)
+	{
+		if (this->agent->position_t.dist(env.coveringPoints.front()) < 1) /// if the sheepdog is too close to the nextPoint on the list, mark it as visited and move to the next point
+
+		{
+			env.coveringPoints.pop_front();
+		}
+
+		if (env.coveringPoints.empty())
+		{
+			env.openCoveringTask = false;
+		}
+		else
+		{
+			coveringPosition = env.coveringPoints.front();
+		}
+	}
+	return coveringPosition;
+}
 
 
 Vector2f CollisionAvoidanceFriends::GetForce()
@@ -398,7 +464,9 @@ Vector2f Driving::GetDrivingPosition()
 	// 1. Each shepherd needs to check if the sheep in their neighbourhood are grouped or not.
 	// 2. If the sheep are clustered, then calculate the driving position.
 
-	SheepList sheepOutOfFlock = SenseSheepOutOfFlock(this->agent, env);
+//	SheepList sheepOutOfFlock = SenseSheepOutOfFlock(this->agent, env);
+	std::vector<DetectedSheepRow>  sheepOutOfFlock = SenseSheepOutOfFlockUsingLocalInformation(this->agent->Lambda_t, this->agent->get_DetectedSheep(), env);
+
 
 	if (sheepOutOfFlock.size() == 0) //if this list is empty, then the sheep are clustered and ready to be driven.
 	{
@@ -435,6 +503,7 @@ Collecting::Collecting(Agent * agent)
 	this->behaviorType = "Collecting";
 }
 
+
 Vector2f Collecting::GetForce()
 {
 	Vector2f CollectingForce = Vector2f();
@@ -458,6 +527,38 @@ return CollectingForce;
 
 
 }
+//
+//Vector2f Collecting::GetCollectingPosition()
+//{
+//	Vector2f CollectingPosition = Vector2f();
+//	// 1. Each shepherd needs to check if the sheep in their neighbourhood are grouped or not.
+//	// 2. If the sheep are clustered, then calculate the driving position.
+//
+//	SheepList sheepOutOfFlock = SenseSheepOutOfFlock(this->agent, env);
+//
+//	if (sheepOutOfFlock.size() > 0) //if this list is not empty, then find the furthest sheep from the group.
+//	{
+//		std::vector<int> y = RankSheepBasedOnDistTo(this->agent->Lambda_t, sheepOutOfFlock);
+//
+//		Vector2f furthestSheepLoc = sheepOutOfFlock[y[y.size() - 1]]->position_t;
+//
+//		int SheeptoCollectID = sheepOutOfFlock[y[y.size() - 1]]->agentID;
+//		this->agent->LoggingSupportingInformation = "toBeCollectedSheepID:" + std::to_string(SheeptoCollectID);
+//
+//		if (env.CollectingPositionEq == 1)
+//		{
+//			CollectingPosition = furthestSheepLoc - ((this->agent->Lambda_t - furthestSheepLoc) / this->agent->Lambda_t.dist(furthestSheepLoc)) * env.R2;
+//		}
+//		else if (env.CollectingPositionEq == 0)
+//		{
+//			CollectingPosition = furthestSheepLoc - ((this->agent->Lambda_t - furthestSheepLoc) / this->agent->Lambda_t.dist(furthestSheepLoc)) * env.Ra_pi_pi;
+//		}
+//	}
+//
+//
+//	return CollectingPosition;
+//
+//}
 
 Vector2f Collecting::GetCollectingPosition()
 {
@@ -465,18 +566,20 @@ Vector2f Collecting::GetCollectingPosition()
 	// 1. Each shepherd needs to check if the sheep in their neighbourhood are grouped or not.
 	// 2. If the sheep are clustered, then calculate the driving position.
 
-	SheepList sheepOutOfFlock = SenseSheepOutOfFlock(this->agent, env);
+	Environment& env = Environment::getInstance();
+	std::vector<DetectedSheepRow> currentDetectedSheepList = this->agent->get_DetectedSheep();
+
+	std::vector<DetectedSheepRow>  sheepOutOfFlock = SenseSheepOutOfFlockUsingLocalInformation(this->agent->Lambda_t , currentDetectedSheepList, env);
 
 	if (sheepOutOfFlock.size() > 0) //if this list is not empty, then find the furthest sheep from the group.
 	{
 		std::vector<int> y = RankSheepBasedOnDistTo(this->agent->Lambda_t, sheepOutOfFlock);
 
-		Vector2f furthestSheepLoc = sheepOutOfFlock[y[y.size() - 1]]->position_t;
 
-		int SheeptoCollectID = sheepOutOfFlock[y[y.size() - 1]]->agentID;
+		Vector2f furthestSheepLoc = sheepOutOfFlock[y[y.size() - 1]].sheepLastSeenLocation;
+
+		int SheeptoCollectID = sheepOutOfFlock[y[y.size() - 1]].sheepID;
 		this->agent->LoggingSupportingInformation = "toBeCollectedSheepID:" + std::to_string(SheeptoCollectID);
-		//CollectingPosition = furthestSheepLoc - ((this->agent->Lambda_t- furthestSheepLoc ) / this->agent->Lambda_t.dist(furthestSheepLoc))* env.Ra_pi_pi;
-		//CollectingPosition = furthestSheepLoc - ((this->agent->Lambda_t - furthestSheepLoc) / this->agent->Lambda_t.dist(furthestSheepLoc))* env.R2;
 
 		if (env.CollectingPositionEq == 1)
 		{
@@ -492,6 +595,7 @@ Vector2f Collecting::GetCollectingPosition()
 	return CollectingPosition;
 
 }
+
 
 Vector2f FollowingPreviousDirectionBehavior::GetForce()
 {

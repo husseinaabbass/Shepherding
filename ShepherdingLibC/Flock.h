@@ -4,10 +4,12 @@
 #else
 #define FLOCK_API __declspec(dllimport)
 #endif
-
-#include "Agents.h"
+#include "SheepAgent.h"
+#include "SheepDogAgent.h"
+//#include "Agents.h"
 #include <vector>
 #include <list>
+
 
 
 
@@ -18,6 +20,7 @@ public:
 	SheepFlock();
 	SheepFlock(std::mt19937 generator, int numSheepList, float xMin, float xMax, float yMin, float yMax, int startingID, std::string pattern);
 	
+	//void CalcNewLoc();
 	void CalcNewLoc();
 	void Move();
 
@@ -29,6 +32,7 @@ class FLOCK_API SheepDogFlock :public std::vector<SheepDogAgent*> {
 public:
 	SheepDogFlock();
 	SheepDogFlock(std::mt19937 generator, int numSheepDogsList, float xMin, float xMax, float yMin, float yMax, int startingID, float sheepDogAgentSpeed);
+	//void CalcNewLoc();
 	void CalcNewLoc();
 	void Move();
 

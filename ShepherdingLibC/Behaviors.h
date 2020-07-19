@@ -27,6 +27,7 @@ class SheepList;
 		std::string behaviorType;
 	private:
 		void FindSheepNotAtGoal();
+		// %todo check this function
 		
 	protected:
 
@@ -69,8 +70,17 @@ class SheepList;
 		Vector2f GetForce() override;
 		float GetMagnitude();
 		AttractionBehavior(Agent* agent);
-
 	};
+
+	class BEHAVIORS_API Covering : public Behavior
+	{
+	public:
+		Vector2f GetForce() override;
+		float GetMagnitude();
+		Covering(Agent* agent);
+		Vector2f GetNextCoveringPosition();
+	};
+
 
 	class BEHAVIORS_API FollowingPreviousDirectionBehavior : public Behavior
 	{

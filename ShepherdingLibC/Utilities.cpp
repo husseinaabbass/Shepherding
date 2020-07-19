@@ -4,26 +4,15 @@
 #include <numeric>      // std::iota
 #include<vector>
 #include "Vector2.h"
+#include "SheepDogAgent.h"
 #include "Flock.h"
 #include "Environment.h"
 #include <tuple>
 #include <math.h>
-
 //template <typename T>
 
 
-//std::vector<size_t> sort_indexes(const vector<T> &v) {
-//
-//	// initialize original index locations
-//	vector<size_t> idx(v.size());
-//	iota(idx.begin(), idx.end(), 0);
-//
-//	// sort indexes based on comparing values in v
-//	sort(idx.begin(), idx.end(),
-//		[&v](size_t i1, size_t i2) {return v[i1] < v[i2]; });
-//
-//	return idx;
-//}
+
 double calcDistTwoLoc(Vector2f Loc1, Vector2f Loc2)
 {
 
@@ -217,6 +206,29 @@ SheepList SenseSheepOutOfFlock(Agent* agent, Environment & env)
 	return SheepOutOfFlockList;
 }
 
+
+
+std::vector<DetectedSheepRow> SenseSheepOutOfFlockUsingLocalInformation(Vector2f LCM, std::vector<DetectedSheepRow> totalList, Environment& env)
+{
+	//Each shepherd needs to check if the sheep in their neighbourhood are grouped or not.
+	// loop over the sheep and check the distance between the sheep and the local centre of mass.
+
+	std::vector<DetectedSheepRow> SheepOutOfFlockList = std::vector<DetectedSheepRow>();
+
+
+	//std::vector<int> SheepOutOfFlockListRank;
+	for (int i = 0; i < totalList.size(); i++) {
+
+		if (LCM.dist((totalList[i].sheepLastSeenLocation)) > env.fN)
+		{
+			SheepOutOfFlockList.push_back(totalList[i]);
+
+		}
+	}
+	return SheepOutOfFlockList;
+}
+
+
 std::vector<int> RankSheepBasedOnDistTo(Vector2f pointP, SheepFlock mySheepList)
 {
 
@@ -242,7 +254,7 @@ std::vector<int> RankSheepBasedOnDistTo(Vector2f pointP, SheepFlock mySheepList)
 }
 
 
-std::vector<int> RankSheepBasedOnDistTo(Vector2f pointP, SheepList mySheepList)
+std::vector<int> RankSheepBasedOnDistTo(Vector2f pointP, SheepList mySheepList)  //overrid using sheeplist rather than the sheepflock
 {
 
 	std::vector<int> y(mySheepList.size());  //create an list of sheepFlock size to store current indices.
@@ -255,17 +267,27 @@ std::vector<int> RankSheepBasedOnDistTo(Vector2f pointP, SheepList mySheepList)
 		sheep_dist.push_back(dist);
 	}
 
-
-	//std::iota(y.begin(), y.end(), 0);			//fill the list with sequentially increasing values  [first, last)
-
-	////auto comparator = [&sheep_dist](int a, int b) { return sheep_dist[a] < sheep_dist[b]; };  //define the comparator that will be used for sorting : currently 
-
-	//std::sort(y.begin(), y.end(), [&sheep_dist](int i1, int i2) {return sheep_dist[i1] < sheep_dist[i2]; });   //sort list y based on comparing distances . as a result, y list will have rank of each sheep based on distance
-
-	//auto y2 = sort_indexes(sheep_dist);
-	y = sort_indexes(sheep_dist);
+y = sort_indexes(sheep_dist); // Sheep indices sorted based on shortest distance to longest distance. 
 	return y;
 }
+
+std::vector<int> RankSheepBasedOnDistTo(Vector2f pointP, std::vector<DetectedSheepRow> mySheepList) //overrid using vector of detected sheeprow
+{
+
+	std::vector<int> y(mySheepList.size());  //create an list of sheepFlock size to store current indices.
+
+	std::vector<float> sheep_dist;
+	// calculate the distance between this sheep and every other sheep
+	for (int i = 0; i < mySheepList.size(); i++) {
+		//(*env.sheepFlock)[i];
+		float dist = pointP.dist((mySheepList)[i].sheepLastSeenLocation);
+		sheep_dist.push_back(dist);
+	}
+
+	y = sort_indexes(sheep_dist); // Sheep indices sorted based on shortest distance to longest distance. 
+	return y;
+}
+
 
 //template <typename T>
 //

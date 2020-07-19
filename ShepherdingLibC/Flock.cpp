@@ -5,6 +5,7 @@
 #include <math.h>
 #include <string.h>
 #include "Utilities.h"
+#include "Modules.h"
 
 
 
@@ -152,9 +153,21 @@ SheepFlock::SheepFlock(std::mt19937 generator, int numSheepList, float xMin, flo
 
 }
 
+
+
 void SheepFlock::CalcNewLoc()
 {
+	//ToDo remove timestep variable if not needed after updating the behavior selection module
+	Environment& env = Environment::getInstance();
+
+	//update the behavior list for the sheep agents...
+	//will be replaced by calling behavior selection module...
 	std::vector<SheepAgent*>::iterator sheepIter;
+
+	for (sheepIter = this->begin(); sheepIter != this->end(); ++sheepIter) {
+		UpdateSheepBehaviors((*sheepIter),env.currentTime);
+	}
+	//std::vector<SheepAgent*>::iterator sheepIter;
 	for (sheepIter = this->begin(); sheepIter != this->end(); ++sheepIter) {
 		(*sheepIter)->calculateSheepPositiont1();
 	}
@@ -315,109 +328,126 @@ SheepDogFlock::SheepDogFlock(std::mt19937 generator,int numSheepDogsList, float 
 }
 
 void SheepDogFlock::CalcNewLoc()
+
 {
-	//before we calculate the next position location, we need to update the shared information among the sheepdogs. 
 
-	//For now, as we don't have communication, we calculate the required information centrally. we need to update the table with the sheepdog locations, the current GCM, and the current furthest sheepdog.
-	
 	Environment& env = Environment::getInstance();
-
-	Vector2f GCM = calculateGloablCentreOfMass(env.sheepFlock);
-	int furthestSheepFromGCM_ID=-1;
-	SheepList sheepOutOfFlock = SenseSheepOutOfFlockCentrally( env,  GCM);
-	
-	int firstSheepDogNotCollectingID = 1;
-	env.sheepdogsSharedCollectingKnowledge.clear();
-	env.SheepDogRoster.clear();
-	env.sheepdogsSharedDrivingKnowledge.clear();
-
-	if (sheepOutOfFlock.size() > 0) //if this list is not empty, then find the furthest sheep from the group.
+	int mode = 0;  // initially assume single sheepDog
+	if (env.M > 1) // If more than one sheepDog, then operate in multi-sheepdog Mode
 	{
-		int i = 0;
-		while ((i < env.sheepDogFlock->size()) && (sheepOutOfFlock.size() > 0))
+		mode = 1;
+	}
+
+	std::vector<SheepDogAgent*>::iterator sheepDogIter;
+
+	for (sheepDogIter = this->begin(); sheepDogIter != this->end(); ++sheepDogIter) {
+		UpdateSheepDogBehaviors((*sheepDogIter), env.currentTime, mode);
+		}
+
+	if (mode == 1)
+	{
+		//before we calculate the next position location, we need to update the shared information among the sheepdogs. 
+
+		//For now, as we don't have communication, we calculate the required information centrally. we need to update the table with the sheepdog locations, the current GCM, and the current furthest sheepdog.
+
+		//Environment& env = Environment::getInstance();
+
+		Vector2f GCM = calculateGloablCentreOfMass(env.sheepFlock);
+		int furthestSheepFromGCM_ID = -1;
+		SheepList sheepOutOfFlock = SenseSheepOutOfFlockCentrally(env, GCM);
+
+		int firstSheepDogNotCollectingID = 1;
+		env.sheepdogsSharedCollectingKnowledge.clear();
+		env.SheepDogRoster.clear();
+		env.sheepdogsSharedDrivingKnowledge.clear();
+
+		if (sheepOutOfFlock.size() > 0) //if this list is not empty, then find the furthest sheep from the group.
 		{
-			expectedCollectingKnowledgePerSheepdog sheepdogsSharedCollectingKnowledge_DataRow;
-			std::vector<int> y = RankSheepBasedOnDistTo((*env.sheepDogFlock)[i]->position_t, sheepOutOfFlock);
-			sheepdogsSharedCollectingKnowledge_DataRow.AssignedSheepID= sheepOutOfFlock[y[0]]->agentID;
-			sheepdogsSharedCollectingKnowledge_DataRow.AssignedSheepLoc=sheepOutOfFlock[y[0]]->position_t;
-			sheepdogsSharedCollectingKnowledge_DataRow.dogID = (*env.sheepDogFlock)[i]->agentID;
-			sheepdogsSharedCollectingKnowledge_DataRow.GCM = GCM;
-			sheepOutOfFlock.erase(sheepOutOfFlock.begin() + y[0]);
-			firstSheepDogNotCollectingID++;
-			env.sheepdogsSharedCollectingKnowledge.push_back(sheepdogsSharedCollectingKnowledge_DataRow);
+			int i = 0;
+			while ((i < env.sheepDogFlock->size()) && (sheepOutOfFlock.size() > 0))
+			{
+				expectedCollectingKnowledgePerSheepdog sheepdogsSharedCollectingKnowledge_DataRow; // Sheep indices sorted based on shortest distance to longest distance. 
+				std::vector<int> y = RankSheepBasedOnDistTo((*env.sheepDogFlock)[i]->position_t, sheepOutOfFlock);
+				sheepdogsSharedCollectingKnowledge_DataRow.AssignedSheepID = sheepOutOfFlock[y[0]]->agentID;
+				sheepdogsSharedCollectingKnowledge_DataRow.AssignedSheepLoc = sheepOutOfFlock[y[0]]->position_t;
+				sheepdogsSharedCollectingKnowledge_DataRow.dogID = (*env.sheepDogFlock)[i]->agentID;
+				sheepdogsSharedCollectingKnowledge_DataRow.GCM = GCM;
+				sheepOutOfFlock.erase(sheepOutOfFlock.begin() + y[0]);
+				firstSheepDogNotCollectingID++;
+				env.sheepdogsSharedCollectingKnowledge.push_back(sheepdogsSharedCollectingKnowledge_DataRow);
+				SheepDogRosterDatarow RosterRow;
+				RosterRow.dogID = (*env.sheepDogFlock)[i]->agentID;
+				RosterRow.dogAssignedTask = "Collecting";
+				env.SheepDogRoster.push_back(RosterRow);
+				i++;
+			}
+		}
+		//AllSheepDog that are not collecting will be assigned a driving role.
+
+		for (int i = firstSheepDogNotCollectingID - 1; i < env.sheepDogFlock->size(); i++)
+		{
 			SheepDogRosterDatarow RosterRow;
 			RosterRow.dogID = (*env.sheepDogFlock)[i]->agentID;
-			RosterRow.dogAssignedTask = "Collecting";
-			env.SheepDogRoster.push_back(RosterRow);	
-			i++;
-		}
-	}
-	//AllSheepDog that are not collecting will be assigned a driving role.
+			RosterRow.dogAssignedTask = "Driving";
+			env.SheepDogRoster.push_back(RosterRow);
 
-	for (int i = firstSheepDogNotCollectingID - 1; i < env.sheepDogFlock->size(); i++)
-	{
-		SheepDogRosterDatarow RosterRow;
-		RosterRow.dogID = (*env.sheepDogFlock)[i]->agentID;
-		RosterRow.dogAssignedTask = "Driving";
-		env.SheepDogRoster.push_back(RosterRow);
-
-		if (firstSheepDogNotCollectingID-i == 1) //Central Sheep C
-		{
-			expectedDrivingKnowledgePerSheepdog row;
-			row.dogID = i+1;
-			row.dogName = "C";
-			row.GCM = GCM;
-			row.dogCurrentLocation = (*env.sheepDogFlock)[i]->position_t;
-
-			env.sheepdogsSharedDrivingKnowledge.push_back(row);
-
-		}
-		else if (firstSheepDogNotCollectingID - i == 0)
-		{
-			expectedDrivingKnowledgePerSheepdog row;
-			row.dogID = i+1;
-			row.dogName = "CL1";
-			row.RefDogID = firstSheepDogNotCollectingID;
-			row.dogLocationRelevant2RefDog = "L";
-			row.dogCurrentLocation = (*env.sheepDogFlock)[i]->position_t;
-
-			row.GCM = GCM;
-			env.sheepdogsSharedDrivingKnowledge.push_back(row);
-		}
-		else
-		{
-			expectedDrivingKnowledgePerSheepdog row;
-			row.dogID = i+1;
-
-			row.RefDogID = row.dogID - 2;//RefDogID = DogID-2 for all dogid>2
-
-			if (std::fmodf(row.dogID, 2) == 0)//Direction from the RefDogID is IF(Mod(DogID,2) == 0, "L", "R")	 for all dogid >1
+			if (firstSheepDogNotCollectingID - i == 1) //Central Sheep C
 			{
+				expectedDrivingKnowledgePerSheepdog row;
+				row.dogID = i + 1;
+				row.dogName = "C";
+				row.GCM = GCM;
+				row.dogCurrentLocation = (*env.sheepDogFlock)[i]->position_t;
+
+				env.sheepdogsSharedDrivingKnowledge.push_back(row);
+
+			}
+			else if (firstSheepDogNotCollectingID - i == 0)
+			{
+				expectedDrivingKnowledgePerSheepdog row;
+				row.dogID = i + 1;
+				row.dogName = "CL1";
+				row.RefDogID = firstSheepDogNotCollectingID;
 				row.dogLocationRelevant2RefDog = "L";
+				row.dogCurrentLocation = (*env.sheepDogFlock)[i]->position_t;
+
+				row.GCM = GCM;
+				env.sheepdogsSharedDrivingKnowledge.push_back(row);
 			}
-			else if (std::fmodf(row.dogID, 2) == 1)
+			else
 			{
+				expectedDrivingKnowledgePerSheepdog row;
+				row.dogID = i + 1;
 
-				row.dogLocationRelevant2RefDog = "R";
+				row.RefDogID = row.dogID - 2;//RefDogID = DogID-2 for all dogid>2
+
+				if (std::fmodf(row.dogID, 2) == 0)//Direction from the RefDogID is IF(Mod(DogID,2) == 0, "L", "R")	 for all dogid >1
+				{
+					row.dogLocationRelevant2RefDog = "L";
+				}
+				else if (std::fmodf(row.dogID, 2) == 1)
+				{
+
+					row.dogLocationRelevant2RefDog = "R";
+				}
+				row.dogName = std::string("C") + row.dogLocationRelevant2RefDog + std::to_string(int(std::floor(row.dogID / 2)));			//name derived based on location CONCAT("C", Direction, Div % 2) for all dogid >1
+				// TODO: check if the having the dogID as odd or even number affects the output.
+				row.dogCurrentLocation = (*env.sheepDogFlock)[i]->position_t;
+
+				row.GCM = GCM;
+				env.sheepdogsSharedDrivingKnowledge.push_back(row);
 			}
-			row.dogName = std::string("C") + row.dogLocationRelevant2RefDog + std::to_string(int(std::floor(row.dogID / 2)));			//name derived based on location CONCAT("C", Direction, Div % 2) for all dogid >1
-			row.dogCurrentLocation = (*env.sheepDogFlock)[i]->position_t;
-
-			row.GCM = GCM;
-			env.sheepdogsSharedDrivingKnowledge.push_back(row);
 		}
 	}
-	//std::vector<expectedCollectingKnowledgePerSheepdog> sheepdogsSharedKnowledge = env.sheepdogsSharedKnowledge;
+	else //mode=0 single sheepdog
+	{
+		
+	//do nothing
 
-	//for (KnowledgePerSheepdog = (env.sheepdogsSharedKnowledge).begin(); KnowledgePerSheepdog != (env.sheepdogsSharedKnowledge).end(); ++KnowledgePerSheepdog) {
-	//	KnowledgePerSheepdog->GCM = GCM;
-	//	KnowledgePerSheepdog->dogCurrentLocation = (*env.sheepDogFlock)[KnowledgePerSheepdog->dogID - 1]->position_t; //DogIDs start from 1 while the vector index starts from zero. Therefore, we access the corresponding dog, and retrieve its position and make it available to all other dogs.
-	//	KnowledgePerSheepdog->furthestSheepID = furthestSheepFromGCM_ID;
-	//}
-
+	}
 
 	// this is where we call the calculate next position location
-	std::vector<SheepDogAgent*>::iterator sheepDogIter;
+	//std::vector<SheepDogAgent*>::iterator sheepDogIter;
 	for (sheepDogIter = this->begin(); sheepDogIter != this->end(); ++sheepDogIter) {
 		(*sheepDogIter)->calculateSheepDogPositiont1();
 	}

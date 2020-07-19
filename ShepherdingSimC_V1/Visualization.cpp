@@ -14,6 +14,7 @@
 int screenWIDTH, screenHEIGHT;
 int maximumNumSteps_v;
 int fieldWIDTH, fieldHEIGHT;
+int fieldStartX, fieldStartY;
 int goalLOCX, goalLOCY;
 int PaddockLength, PaddockWidth;
 float imageScale;
@@ -37,7 +38,7 @@ bool AttractionBehaviorForceOn = true;
 bool CollisionAvoidanceStaticObstaclesForceOn = true;
 bool JitteringForceOn = true;
 bool ScaleForceVisualization = true;
-void Visualization::init(int randomNumberSeed, std::string title, int inScale, int simSpeed, int screenWidth, int screenHeight, int fieldWidth, int fieldHeight, int N, int M, float R_pi_beta, float Ra_pi_pi, float Rs_pi_pi, float R_beta_beta, float W_pi_pi, float W_beta_beta, float W_pi_beta, float W_pi_Lambda, float W_pi_upsilon, float W_e_pi_i, float W_e_beta_j, float S_t_beta_j, float eta, int card_Omega_pi_pi, int card_Omega_beta_pi, int goalLocX, int goalLocY, int paddockLENGTH, int paddockWIDTH, bool paddockON, bool circularPathPlanningON, bool StallingON, float StallingDistance, int R2, int R3, int goalRadius, int ForceRegulated, int fNequation, int DrivingPositionEq, int CollectingPositionEq, int SheepNeignborhoodSelection, int ModulationDecayFactor, int sheepInitializationStartingX, int sheepInitializationStartingY, int sheepInitializationXRange, int sheepInitializationYRange, std::string sheepInitializationPattern, int sheepDogInitializationStartingX, int sheepDogInitializationStartingY, int sheepDogInitializationXRange, int sheepDogInitializationYRange, int MaximumNumSteps, float obstaclesDensity, float obstaclesRadius, bool CollisionAvoidanceOpponentsForceON, bool CollisionAvoidanceFriendsForceON, bool AttractionBehaviorForceON, bool CollisionAvoidanceStaticObstaclesForceON, bool JitteringForceON, bool scaleForceVisualization)
+void Visualization::init(int randomNumberSeed, std::string title, int inScale, int simSpeed, int screenWidth, int screenHeight, int fieldWidth, int fieldHeight, int N, int M, float R_pi_beta, float Ra_pi_pi, float Rs_pi_pi, float R_beta_beta, float R_beta_pi, float W_pi_pi, float W_beta_beta, float W_pi_beta, float W_pi_Lambda, float W_pi_upsilon, float W_e_pi_i, float W_e_beta_j, float S_t_beta_j, float eta, int card_Omega_pi_pi, int card_Omega_beta_pi, int goalLocX, int goalLocY, int paddockLENGTH, int paddockWIDTH, bool paddockON, bool circularPathPlanningON, bool StallingON, float StallingDistance, int R2, int R3, int goalRadius, int ForceRegulated, int fNequation, int DrivingPositionEq, int CollectingPositionEq, int SheepNeignborhoodSelection, int ModulationDecayFactor, int sheepInitializationStartingX, int sheepInitializationStartingY, int sheepInitializationXRange, int sheepInitializationYRange, std::string sheepInitializationPattern, int sheepDogInitializationStartingX, int sheepDogInitializationStartingY, int sheepDogInitializationXRange, int sheepDogInitializationYRange, int MaximumNumSteps, float obstaclesDensity, float obstaclesRadius, bool CollisionAvoidanceOpponentsForceON, bool CollisionAvoidanceFriendsForceON, bool AttractionBehaviorForceON, bool CollisionAvoidanceStaticObstaclesForceON, bool JitteringForceON, bool scaleForceVisualization)
 {
 	scale = inScale;
 	maximumNumSteps_v = MaximumNumSteps;
@@ -63,13 +64,15 @@ void Visualization::init(int randomNumberSeed, std::string title, int inScale, i
 	screenHEIGHT = screenHeight;
 	fieldWIDTH = fieldWidth;
 	fieldHEIGHT = fieldHeight;
-	this->fieldStartX = (screenWIDTH - fieldWIDTH) / 2;
-	this->fieldStartY = (screenHEIGHT - fieldHEIGHT) / 2;
+	//this->fieldStartX = (screenWIDTH - fieldWIDTH) / 2;
+	//this->fieldStartY = (screenHEIGHT - fieldHEIGHT) / 2;
+	fieldStartX = (screenWIDTH - fieldWIDTH) / 2;
+	fieldStartY = (screenHEIGHT - fieldHEIGHT) / 2;
 	goalLOCX = goalLocX;
 	goalLOCY = goalLocY;
 	
 	sim = new Simulation();
-	sim->init(randomNumberSeed, N, M, fieldStartX, fieldStartY, fieldWIDTH, fieldHEIGHT,  R_pi_beta,  Ra_pi_pi, Rs_pi_pi, R_beta_beta,  W_pi_pi, W_beta_beta,  W_pi_beta,  W_pi_Lambda,  W_pi_upsilon,  W_e_pi_i,  W_e_beta_j,S_t_beta_j, eta,card_Omega_pi_pi, card_Omega_beta_pi, goalLocX, goalLocY, PaddockLength, PaddockWidth,paddockON, circularPathPlanningON,  StallingON,  StallingDistance, R2, R3,  GoalRadius, ForceRegulated, fNequation,  DrivingPositionEq,  CollectingPositionEq,  SheepNeignborhoodSelection,  ModulationDecayFactor, sheepInitializationStartingX, sheepInitializationStartingY, sheepInitializationXRange, sheepInitializationYRange, sheepInitializationPattern, sheepDogInitializationStartingX, sheepDogInitializationStartingY, sheepDogInitializationXRange, sheepDogInitializationYRange, obstaclesDensity, obstaclesRadius);
+	sim->init(randomNumberSeed, N, M, fieldStartX, fieldStartY, fieldWIDTH, fieldHEIGHT,  R_pi_beta,  Ra_pi_pi, Rs_pi_pi, R_beta_beta, R_beta_pi, W_pi_pi, W_beta_beta,  W_pi_beta,  W_pi_Lambda,  W_pi_upsilon,  W_e_pi_i,  W_e_beta_j,S_t_beta_j, eta,card_Omega_pi_pi, card_Omega_beta_pi, goalLocX, goalLocY, PaddockLength, PaddockWidth,paddockON, circularPathPlanningON,  StallingON,  StallingDistance, R2, R3,  GoalRadius, ForceRegulated, fNequation,  DrivingPositionEq,  CollectingPositionEq,  SheepNeignborhoodSelection,  ModulationDecayFactor, sheepInitializationStartingX, sheepInitializationStartingY, sheepInitializationXRange, sheepInitializationYRange, sheepInitializationPattern, sheepDogInitializationStartingX, sheepDogInitializationStartingY, sheepDogInitializationXRange, sheepDogInitializationYRange, obstaclesDensity, obstaclesRadius);
 	
 	ConfigFileName = title.substr(23, ConfigFileName.length());
 
@@ -152,23 +155,23 @@ void Visualization::init(int randomNumberSeed, std::string title, int inScale, i
 				if (IMG_Init(imgFlags) & imgFlags)
 				{
 
-					arrowOrange = IMG_Load("..\\InputFiles\\OrangeArrow.png");
+					arrowOrange = IMG_Load("../InputFiles/OrangeArrow.png");
 					arrowTextureOrange = SDL_CreateTextureFromSurface(gRenderer, arrowOrange);
-					arrowGreen = IMG_Load("..\\InputFiles\\GreenArrow.png");
+					arrowGreen = IMG_Load("../InputFiles/GreenArrow.png");
 					arrowTextureGreen = SDL_CreateTextureFromSurface(gRenderer, arrowGreen);
-					arrowBlack = IMG_Load("..\\InputFiles\\BlackArrow.png");
+					arrowBlack = IMG_Load("../InputFiles/BlackArrow.png");
 					arrowTextureBlack = SDL_CreateTextureFromSurface(gRenderer, arrowBlack);
-					arrowBlue = IMG_Load("..\\InputFiles\\BlueArrow.png");
+					arrowBlue = IMG_Load("../InputFiles/BlueArrow.png");
 					arrowTextureBlue = SDL_CreateTextureFromSurface(gRenderer, arrowBlue);
-					arrowRed = IMG_Load("..\\InputFiles\\RedArrow.png");
+					arrowRed = IMG_Load("../InputFiles/RedArrow.png");
 					arrowTextureRed = SDL_CreateTextureFromSurface(gRenderer, arrowRed);
-					arrowBrown = IMG_Load("..\\InputFiles\\BrownArrow.png");
+					arrowBrown = IMG_Load("../InputFiles/BrownArrow.png");
 					arrowTextureBrown = SDL_CreateTextureFromSurface(gRenderer, arrowBrown);
-					shepherdIcon= IMG_Load("..\\InputFiles\\shepherd_icon.png");
+					shepherdIcon= IMG_Load("../InputFiles/shepherd_icon.png");
 					shepherdIconTexture = SDL_CreateTextureFromSurface(gRenderer, shepherdIcon);
-					goalIcon = IMG_Load("..\\InputFiles\\goal_icon.png");
+					goalIcon = IMG_Load("../InputFiles/goal_icon.png");
 					goalIconTexture = SDL_CreateTextureFromSurface(gRenderer, goalIcon);
-					obstacleIcon = IMG_Load("..\\InputFiles\\BrownCircle.png");
+					obstacleIcon = IMG_Load("../InputFiles/BrownCircle.png");
 					obstacleIconTexture = SDL_CreateTextureFromSurface(gRenderer, obstacleIcon);
 
 
@@ -186,8 +189,8 @@ void Visualization::init(int randomNumberSeed, std::string title, int inScale, i
 		//SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255); //White color
 
 		//renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
-		font = TTF_OpenFont("..\\InputFiles\\FreeSans.ttf", 20); //this opens a font style and sets a size
-		font_small = TTF_OpenFont("..\\InputFiles\\FreeSans.ttf", 10);
+		font = TTF_OpenFont("../InputFiles/FreeSans.ttf", 20); //this opens a font style and sets a size
+		font_small = TTF_OpenFont("../InputFiles/FreeSans.ttf", 10);
 		if (!font) {
 			printf("TTF_OpenFont: %s\n", TTF_GetError());
 			// handle error
@@ -234,6 +237,9 @@ void Visualization::update(std::ofstream & outfile, std::ofstream & outputComple
 
 void Visualization::render()
 {
+	
+
+
 	//currentTime = (int)(Visualization::Time());
 
 	//	// Clear screen with white
@@ -551,16 +557,18 @@ void Visualization::DrawFlock()
 		DrawForce((*env.sheepDogFlock)[i]->position_t.x, (*env.sheepDogFlock)[i]->position_t.y, (*env.sheepDogFlock)[i]->get_F_beta_i_beta_k_t(), arrowTextureBlack, arrowimageScale);
 
 		//Extra information on sheepDog forces to check implementation.
-		DrawPoint((*env.sheepDogFlock)[i]->Lambda_t.x, (*env.sheepDogFlock)[i]->Lambda_t.y, imageScale, 0, 255, 0);
-		if (env.M == 1)
+		if (((*env.sheepDogFlock)[i]->Lambda_t.x != 0) & ((*env.sheepDogFlock)[i]->Lambda_t.y != 0))
 		{
-			DrawText("SheepDog LCM " + std::to_string((*env.sheepDogFlock)[i]->agentID), (int)(*env.sheepDogFlock)[i]->Lambda_t.x, (int)(*env.sheepDogFlock)[i]->Lambda_t.y, font_small, "right");
+			DrawPoint((*env.sheepDogFlock)[i]->Lambda_t.x, (*env.sheepDogFlock)[i]->Lambda_t.y, imageScale, 0, 255, 0);
+			if (env.M == 1)
+			{
+				DrawText("SheepDog LCM " + std::to_string((*env.sheepDogFlock)[i]->agentID), (int)(*env.sheepDogFlock)[i]->Lambda_t.x, (int)(*env.sheepDogFlock)[i]->Lambda_t.y, font_small, "right");
+			}
+			if (env.M > 1)
+			{
+				DrawText("SheepDog GCM ", (int)(*env.sheepDogFlock)[i]->Lambda_t.x, (int)(*env.sheepDogFlock)[i]->Lambda_t.y, font_small, "right");
+			}
 		}
-		if (env.M > 1)
-		{
-			DrawText("SheepDog GCM ", (int)(*env.sheepDogFlock)[i]->Lambda_t.x, (int)(*env.sheepDogFlock)[i]->Lambda_t.y, font_small, "right");
-		}
-
 		if ((*env.sheepDogFlock)[i]->get_F_beta_j_d_t().x != 0)
 		{
 			DrawPoint((*env.sheepDogFlock)[i]->get_P_beta_j_d_t().x, (*env.sheepDogFlock)[i]->get_P_beta_j_d_t().y, imageScale, 0, 0, 0);

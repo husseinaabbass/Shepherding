@@ -32,7 +32,7 @@ CLI::~CLI()
 }
 
 
-void CLI::init( int randomNumberSeed, int fieldWidth, int fieldHeight, int N, int M, float R_pi_beta, float Ra_pi_pi, float Rs_pi_pi,  float R_beta_beta, float W_pi_pi, float W_beta_beta, float W_pi_beta, float W_pi_Lambda, float W_pi_upsilon, float W_e_pi_i, float W_e_beta_j, float S_t_beta_j, float eta, int card_Omega_pi_pi, int card_Omega_beta_pi, int goalLocX, int goalLocY, int paddockLENGTH, int paddockWIDTH, bool paddockON, bool circularPathPlanningON, bool StallingON, float StallingDistance, int R2, int R3, int goalRadius, int ForceRegulated, int fNequation, int DrivingPositionEq, int CollectingPositionEq, int SheepNeignborhoodSelection, int ModulationDecayFactor,
+void CLI::init( int randomNumberSeed, int fieldWidth, int fieldHeight, int N, int M, float R_pi_beta, float Ra_pi_pi, float Rs_pi_pi,  float R_beta_beta, float R_beta_pi, float W_pi_pi, float W_beta_beta, float W_pi_beta, float W_pi_Lambda, float W_pi_upsilon, float W_e_pi_i, float W_e_beta_j, float S_t_beta_j, float eta, int card_Omega_pi_pi, int card_Omega_beta_pi, int goalLocX, int goalLocY, int paddockLENGTH, int paddockWIDTH, bool paddockON, bool circularPathPlanningON, bool StallingON, float StallingDistance, int R2, int R3, int goalRadius, int ForceRegulated, int fNequation, int DrivingPositionEq, int CollectingPositionEq, int SheepNeignborhoodSelection, int ModulationDecayFactor,
 	int sheepInitializationStartingX, int sheepInitializationStartingY, int sheepInitializationXRange, int sheepInitializationYRange, std::string sheepInitializationPattern, int sheepDogInitializationStartingX, int sheepDogInitializationStartingY, int sheepDogInitializationXRange, int sheepDogInitializationYRange, int MaximumNumSteps, float obstaclesDensity, float obstaclesRadius)
 {
 	//simulationSpeed = simSpeed;
@@ -45,13 +45,13 @@ void CLI::init( int randomNumberSeed, int fieldWidth, int fieldHeight, int N, in
 	
 	//fieldWIDTH = fieldWidth;
 	//fieldHEIGHT = fieldHeight;
-	this->fieldStartX = 0;
-	this->fieldStartY = 0;
+	//this->fieldStartX = 0;
+	//this->fieldStartY = 0;
 	//goalLOCX = goalLocX;
 	//goalLOCY = goalLocY;
 	GoalRadius_cli = goalRadius;
 	CLIsim = new Simulation();
-	CLIsim->init(randomNumberSeed, N, M, fieldStartX, fieldStartY, fieldWidth, fieldHeight, R_pi_beta, Ra_pi_pi, Rs_pi_pi, R_beta_beta, W_pi_pi, W_beta_beta, W_pi_beta, W_pi_Lambda, W_pi_upsilon, W_e_pi_i, W_e_beta_j, S_t_beta_j, eta, card_Omega_pi_pi, card_Omega_beta_pi, goalLocX, goalLocY, paddockLENGTH, paddockWIDTH, paddockON, circularPathPlanningON,  StallingON,  StallingDistance, R2, R3, goalRadius, ForceRegulated, fNequation, DrivingPositionEq, CollectingPositionEq, SheepNeignborhoodSelection, ModulationDecayFactor, sheepInitializationStartingX, sheepInitializationStartingY, sheepInitializationXRange, sheepInitializationYRange, sheepInitializationPattern, sheepDogInitializationStartingX, sheepDogInitializationStartingY, sheepDogInitializationXRange, sheepDogInitializationYRange, obstaclesDensity, obstaclesRadius);
+	CLIsim->init(randomNumberSeed, N, M, fieldStartX, fieldStartY, fieldWidth, fieldHeight, R_pi_beta, Ra_pi_pi, Rs_pi_pi, R_beta_beta, R_beta_pi, W_pi_pi, W_beta_beta, W_pi_beta, W_pi_Lambda, W_pi_upsilon, W_e_pi_i, W_e_beta_j, S_t_beta_j, eta, card_Omega_pi_pi, card_Omega_beta_pi, goalLocX, goalLocY, paddockLENGTH, paddockWIDTH, paddockON, circularPathPlanningON,  StallingON,  StallingDistance, R2, R3, goalRadius, ForceRegulated, fNequation, DrivingPositionEq, CollectingPositionEq, SheepNeignborhoodSelection, ModulationDecayFactor, sheepInitializationStartingX, sheepInitializationStartingY, sheepInitializationXRange, sheepInitializationYRange, sheepInitializationPattern, sheepDogInitializationStartingX, sheepDogInitializationStartingY, sheepDogInitializationXRange, sheepDogInitializationYRange, obstaclesDensity, obstaclesRadius);
 
 	CLI::isRunning = true;
 	maximumNumSteps = MaximumNumSteps;

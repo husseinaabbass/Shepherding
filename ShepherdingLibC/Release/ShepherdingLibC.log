@@ -1,0 +1,1080 @@
+﻿  stdafx.cpp
+  Agents.cpp
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Behaviors.h(27,27): warning C4251: 'Behavior::behaviorType': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Behavior'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\xstring(4575): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Behaviors.h(42,2): warning C4251: 'std::list<Behavior *,std::allocator<Behavior *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::list<Behavior *,std::allocator<Behavior *>>'
+          with
+          [
+              _Ty=Behavior *,
+              _Alloc=std::allocator<Behavior *>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\list(1797): message : see declaration of 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=Behavior *,
+              _Alloc=std::allocator<Behavior *>
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(59,23): warning C4251: 'Agent::agentType': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Agent'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\xstring(4575): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(63,21): warning C4251: 'Agent::position_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(67,22): warning C4251: 'Agent::position_t1': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(71,19): warning C4251: 'Agent::Lambda_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(85,14): warning C4251: 'Agent::F_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(86,19): warning C4251: 'Agent::F_obst_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(88,42): warning C4251: 'Agent::LoggingSupportingInformation': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Agent'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\xstring(4575): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(101,45): warning C4251: 'Agent::DetectedSheep': class 'std::vector<DetectedSheepRow,std::allocator<DetectedSheepRow>>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(96): message : see declaration of 'std::vector<DetectedSheepRow,std::allocator<DetectedSheepRow>>'
+  Behaviors.cpp
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Behaviors.h(27,27): warning C4251: 'Behavior::behaviorType': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Behavior'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\xstring(4575): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Behaviors.h(42,2): warning C4251: 'std::list<Behavior *,std::allocator<Behavior *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::list<Behavior *,std::allocator<Behavior *>>'
+          with
+          [
+              _Ty=Behavior *,
+              _Alloc=std::allocator<Behavior *>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\list(1797): message : see declaration of 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=Behavior *,
+              _Alloc=std::allocator<Behavior *>
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(15,27): warning C4251: 'Obstacle::position_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Obstacle'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(30,22): warning C4251: 'DynamicObstacle::position_t1': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'DynamicObstacle'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(49,1): warning C4251: 'std::vector<StaticObstacle *,std::allocator<StaticObstacle *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<StaticObstacle *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::vector<StaticObstacle *,std::allocator<StaticObstacle *>>'
+          with
+          [
+              _Ty=StaticObstacle *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\vector(1749): message : see declaration of 'std::_Compressed_pair<std::allocator<StaticObstacle *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=StaticObstacle *
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(57,1): warning C4251: 'std::list<DynamicObstacle *,std::allocator<DynamicObstacle *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::list<DynamicObstacle *,std::allocator<DynamicObstacle *>>'
+          with
+          [
+              _Ty=DynamicObstacle *,
+              _Alloc=std::allocator<DynamicObstacle *>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\list(1797): message : see declaration of 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=DynamicObstacle *,
+              _Alloc=std::allocator<DynamicObstacle *>
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(61,1): warning C4251: 'std::list<Fence *,std::allocator<Fence *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::list<Fence *,std::allocator<Fence *>>'
+          with
+          [
+              _Ty=Fence *,
+              _Alloc=std::allocator<Fence *>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\list(1797): message : see declaration of 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=Fence *,
+              _Alloc=std::allocator<Fence *>
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(96,13): warning C4251: 'Environment::PG': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Environment'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(108,51): warning C4251: 'Environment::SheepDogRoster': class 'std::vector<SheepDogRosterDatarow,std::allocator<SheepDogRosterDatarow>>' needs to have dll-interface to be used by clients of class 'Environment'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(108): message : see declaration of 'std::vector<SheepDogRosterDatarow,std::allocator<SheepDogRosterDatarow>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(109,88): warning C4251: 'Environment::sheepdogsSharedCollectingKnowledge': class 'std::vector<expectedCollectingKnowledgePerSheepdog,std::allocator<expectedCollectingKnowledgePerSheepdog>>' needs to have dll-interface to be used by clients of class 'Environment'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(109): message : see declaration of 'std::vector<expectedCollectingKnowledgePerSheepdog,std::allocator<expectedCollectingKnowledgePerSheepdog>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(110,82): warning C4251: 'Environment::sheepdogsSharedDrivingKnowledge': class 'std::vector<expectedDrivingKnowledgePerSheepdog,std::allocator<expectedDrivingKnowledgePerSheepdog>>' needs to have dll-interface to be used by clients of class 'Environment'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(110): message : see declaration of 'std::vector<expectedDrivingKnowledgePerSheepdog,std::allocator<expectedDrivingKnowledgePerSheepdog>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(119,36): warning C4251: 'Environment::coveringPoints': class 'std::list<Vector2f,std::allocator<Vector2f>>' needs to have dll-interface to be used by clients of class 'Environment'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(119): message : see declaration of 'std::list<Vector2f,std::allocator<Vector2f>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(59,23): warning C4251: 'Agent::agentType': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Agent'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\xstring(4575): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(63,21): warning C4251: 'Agent::position_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(67,22): warning C4251: 'Agent::position_t1': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(71,19): warning C4251: 'Agent::Lambda_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(85,14): warning C4251: 'Agent::F_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(86,19): warning C4251: 'Agent::F_obst_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(88,42): warning C4251: 'Agent::LoggingSupportingInformation': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Agent'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\xstring(4575): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(101,45): warning C4251: 'Agent::DetectedSheep': class 'std::vector<DetectedSheepRow,std::allocator<DetectedSheepRow>>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(96): message : see declaration of 'std::vector<DetectedSheepRow,std::allocator<DetectedSheepRow>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepAgent.h(25,26): warning C4251: 'SheepAgent::F_pi_i_beta_j_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepAgent.h(28,24): warning C4251: 'SheepAgent::F_pi_i_pi_k_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepAgent.h(30,26): warning C4251: 'SheepAgent::F_pi_i_Lambda_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepAgent.h(32,21): warning C4251: 'SheepAgent::F_pi_i_E_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(25,23): warning C4251: 'SheepDogAgent::F_beta_j_c_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(26,23): warning C4251: 'SheepDogAgent::F_beta_j_d_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(27,24): warning C4251: 'SheepDogAgent::F_beta_j_E_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(28,28): warning C4251: 'SheepDogAgent::F_beta_i_beta_k_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(29,23): warning C4251: 'SheepDogAgent::P_beta_j_d_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(30,23): warning C4251: 'SheepDogAgent::P_beta_j_c_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(32,24): warning C4251: 'SheepDogAgent::P_beta_j_cv_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(33,24): warning C4251: 'SheepDogAgent::F_beta_j_cv_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Flock.h(18,61): warning C4251: 'std::vector<SheepAgent *,std::allocator<SheepAgent *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<SheepAgent *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::vector<SheepAgent *,std::allocator<SheepAgent *>>'
+          with
+          [
+              _Ty=SheepAgent *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\vector(1749): message : see declaration of 'std::_Compressed_pair<std::allocator<SheepAgent *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=SheepAgent *
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Flock.h(31,67): warning C4251: 'std::vector<SheepDogAgent *,std::allocator<SheepDogAgent *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<SheepDogAgent *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::vector<SheepDogAgent *,std::allocator<SheepDogAgent *>>'
+          with
+          [
+              _Ty=SheepDogAgent *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\vector(1749): message : see declaration of 'std::_Compressed_pair<std::allocator<SheepDogAgent *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=SheepDogAgent *
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Behaviors.cpp(136,22): warning C4018: '<': signed/unsigned mismatch
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Behaviors.cpp(144,22): warning C4018: '<': signed/unsigned mismatch
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Behaviors.cpp(148,182): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Behaviors.cpp(158,22): warning C4018: '<': signed/unsigned mismatch
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Behaviors.cpp(176,23): warning C4018: '<': signed/unsigned mismatch
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Behaviors.cpp(184,23): warning C4018: '<': signed/unsigned mismatch
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Behaviors.cpp(188,192): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Behaviors.cpp(195,23): warning C4018: '<': signed/unsigned mismatch
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Behaviors.cpp(302,21): warning C4018: '<': signed/unsigned mismatch
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Behaviors.cpp(309,184): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Behaviors.cpp(309,170): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Behaviors.cpp(309,156): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Behaviors.cpp(353,21): warning C4018: '<': signed/unsigned mismatch
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Behaviors.cpp(369,93): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Behaviors.cpp(658,21): warning C4018: '<': signed/unsigned mismatch
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Behaviors.cpp(706,21): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Behaviors.cpp(857,21): warning C4018: '<': signed/unsigned mismatch
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(50,27): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(49): message : while compiling class template member function 'Vector2<float> Vector2<float>::operator /(double)'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Behaviors.cpp(39): message : see reference to function template instantiation 'Vector2<float> Vector2<float>::operator /(double)' being compiled
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(15): message : see reference to class template instantiation 'Vector2<float>' being compiled
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(50,20): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(47,27): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(46): message : while compiling class template member function 'Vector2<float> Vector2<float>::operator *(double)'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Behaviors.cpp(149): message : see reference to function template instantiation 'Vector2<float> Vector2<float>::operator *(double)' being compiled
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(47,20): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  dllmain.cpp
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Behaviors.h(27,27): warning C4251: 'Behavior::behaviorType': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Behavior'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\xstring(4575): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Behaviors.h(42,2): warning C4251: 'std::list<Behavior *,std::allocator<Behavior *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::list<Behavior *,std::allocator<Behavior *>>'
+          with
+          [
+              _Ty=Behavior *,
+              _Alloc=std::allocator<Behavior *>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\list(1797): message : see declaration of 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=Behavior *,
+              _Alloc=std::allocator<Behavior *>
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(59,23): warning C4251: 'Agent::agentType': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Agent'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\xstring(4575): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(63,21): warning C4251: 'Agent::position_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(67,22): warning C4251: 'Agent::position_t1': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(71,19): warning C4251: 'Agent::Lambda_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(85,14): warning C4251: 'Agent::F_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(86,19): warning C4251: 'Agent::F_obst_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(88,42): warning C4251: 'Agent::LoggingSupportingInformation': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Agent'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\xstring(4575): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(101,45): warning C4251: 'Agent::DetectedSheep': class 'std::vector<DetectedSheepRow,std::allocator<DetectedSheepRow>>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(96): message : see declaration of 'std::vector<DetectedSheepRow,std::allocator<DetectedSheepRow>>'
+  Environment.cpp
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(15,27): warning C4251: 'Obstacle::position_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Obstacle'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(30,22): warning C4251: 'DynamicObstacle::position_t1': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'DynamicObstacle'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(49,1): warning C4251: 'std::vector<StaticObstacle *,std::allocator<StaticObstacle *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<StaticObstacle *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::vector<StaticObstacle *,std::allocator<StaticObstacle *>>'
+          with
+          [
+              _Ty=StaticObstacle *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\vector(1749): message : see declaration of 'std::_Compressed_pair<std::allocator<StaticObstacle *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=StaticObstacle *
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(57,1): warning C4251: 'std::list<DynamicObstacle *,std::allocator<DynamicObstacle *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::list<DynamicObstacle *,std::allocator<DynamicObstacle *>>'
+          with
+          [
+              _Ty=DynamicObstacle *,
+              _Alloc=std::allocator<DynamicObstacle *>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\list(1797): message : see declaration of 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=DynamicObstacle *,
+              _Alloc=std::allocator<DynamicObstacle *>
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(61,1): warning C4251: 'std::list<Fence *,std::allocator<Fence *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::list<Fence *,std::allocator<Fence *>>'
+          with
+          [
+              _Ty=Fence *,
+              _Alloc=std::allocator<Fence *>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\list(1797): message : see declaration of 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=Fence *,
+              _Alloc=std::allocator<Fence *>
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(96,13): warning C4251: 'Environment::PG': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Environment'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(108,51): warning C4251: 'Environment::SheepDogRoster': class 'std::vector<SheepDogRosterDatarow,std::allocator<SheepDogRosterDatarow>>' needs to have dll-interface to be used by clients of class 'Environment'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(108): message : see declaration of 'std::vector<SheepDogRosterDatarow,std::allocator<SheepDogRosterDatarow>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(109,88): warning C4251: 'Environment::sheepdogsSharedCollectingKnowledge': class 'std::vector<expectedCollectingKnowledgePerSheepdog,std::allocator<expectedCollectingKnowledgePerSheepdog>>' needs to have dll-interface to be used by clients of class 'Environment'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(109): message : see declaration of 'std::vector<expectedCollectingKnowledgePerSheepdog,std::allocator<expectedCollectingKnowledgePerSheepdog>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(110,82): warning C4251: 'Environment::sheepdogsSharedDrivingKnowledge': class 'std::vector<expectedDrivingKnowledgePerSheepdog,std::allocator<expectedDrivingKnowledgePerSheepdog>>' needs to have dll-interface to be used by clients of class 'Environment'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(110): message : see declaration of 'std::vector<expectedDrivingKnowledgePerSheepdog,std::allocator<expectedDrivingKnowledgePerSheepdog>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(119,36): warning C4251: 'Environment::coveringPoints': class 'std::list<Vector2f,std::allocator<Vector2f>>' needs to have dll-interface to be used by clients of class 'Environment'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(119): message : see declaration of 'std::list<Vector2f,std::allocator<Vector2f>>'
+  Flock.cpp
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Behaviors.h(27,27): warning C4251: 'Behavior::behaviorType': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Behavior'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\xstring(4575): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Behaviors.h(42,2): warning C4251: 'std::list<Behavior *,std::allocator<Behavior *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::list<Behavior *,std::allocator<Behavior *>>'
+          with
+          [
+              _Ty=Behavior *,
+              _Alloc=std::allocator<Behavior *>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\list(1797): message : see declaration of 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=Behavior *,
+              _Alloc=std::allocator<Behavior *>
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(59,23): warning C4251: 'Agent::agentType': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Agent'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\xstring(4575): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(63,21): warning C4251: 'Agent::position_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(67,22): warning C4251: 'Agent::position_t1': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(71,19): warning C4251: 'Agent::Lambda_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(85,14): warning C4251: 'Agent::F_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(86,19): warning C4251: 'Agent::F_obst_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(88,42): warning C4251: 'Agent::LoggingSupportingInformation': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Agent'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\xstring(4575): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(101,45): warning C4251: 'Agent::DetectedSheep': class 'std::vector<DetectedSheepRow,std::allocator<DetectedSheepRow>>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(96): message : see declaration of 'std::vector<DetectedSheepRow,std::allocator<DetectedSheepRow>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepAgent.h(25,26): warning C4251: 'SheepAgent::F_pi_i_beta_j_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepAgent.h(28,24): warning C4251: 'SheepAgent::F_pi_i_pi_k_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepAgent.h(30,26): warning C4251: 'SheepAgent::F_pi_i_Lambda_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepAgent.h(32,21): warning C4251: 'SheepAgent::F_pi_i_E_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(25,23): warning C4251: 'SheepDogAgent::F_beta_j_c_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(26,23): warning C4251: 'SheepDogAgent::F_beta_j_d_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(27,24): warning C4251: 'SheepDogAgent::F_beta_j_E_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(28,28): warning C4251: 'SheepDogAgent::F_beta_i_beta_k_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(29,23): warning C4251: 'SheepDogAgent::P_beta_j_d_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(30,23): warning C4251: 'SheepDogAgent::P_beta_j_c_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(32,24): warning C4251: 'SheepDogAgent::P_beta_j_cv_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(33,24): warning C4251: 'SheepDogAgent::F_beta_j_cv_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Flock.h(18,61): warning C4251: 'std::vector<SheepAgent *,std::allocator<SheepAgent *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<SheepAgent *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::vector<SheepAgent *,std::allocator<SheepAgent *>>'
+          with
+          [
+              _Ty=SheepAgent *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\vector(1749): message : see declaration of 'std::_Compressed_pair<std::allocator<SheepAgent *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=SheepAgent *
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Flock.h(31,67): warning C4251: 'std::vector<SheepDogAgent *,std::allocator<SheepDogAgent *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<SheepDogAgent *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::vector<SheepDogAgent *,std::allocator<SheepDogAgent *>>'
+          with
+          [
+              _Ty=SheepDogAgent *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\vector(1749): message : see declaration of 'std::_Compressed_pair<std::allocator<SheepDogAgent *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=SheepDogAgent *
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(15,27): warning C4251: 'Obstacle::position_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Obstacle'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(30,22): warning C4251: 'DynamicObstacle::position_t1': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'DynamicObstacle'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(49,1): warning C4251: 'std::vector<StaticObstacle *,std::allocator<StaticObstacle *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<StaticObstacle *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::vector<StaticObstacle *,std::allocator<StaticObstacle *>>'
+          with
+          [
+              _Ty=StaticObstacle *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\vector(1749): message : see declaration of 'std::_Compressed_pair<std::allocator<StaticObstacle *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=StaticObstacle *
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(57,1): warning C4251: 'std::list<DynamicObstacle *,std::allocator<DynamicObstacle *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::list<DynamicObstacle *,std::allocator<DynamicObstacle *>>'
+          with
+          [
+              _Ty=DynamicObstacle *,
+              _Alloc=std::allocator<DynamicObstacle *>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\list(1797): message : see declaration of 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=DynamicObstacle *,
+              _Alloc=std::allocator<DynamicObstacle *>
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(61,1): warning C4251: 'std::list<Fence *,std::allocator<Fence *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::list<Fence *,std::allocator<Fence *>>'
+          with
+          [
+              _Ty=Fence *,
+              _Alloc=std::allocator<Fence *>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\list(1797): message : see declaration of 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=Fence *,
+              _Alloc=std::allocator<Fence *>
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(96,13): warning C4251: 'Environment::PG': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Environment'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(108,51): warning C4251: 'Environment::SheepDogRoster': class 'std::vector<SheepDogRosterDatarow,std::allocator<SheepDogRosterDatarow>>' needs to have dll-interface to be used by clients of class 'Environment'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(108): message : see declaration of 'std::vector<SheepDogRosterDatarow,std::allocator<SheepDogRosterDatarow>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(109,88): warning C4251: 'Environment::sheepdogsSharedCollectingKnowledge': class 'std::vector<expectedCollectingKnowledgePerSheepdog,std::allocator<expectedCollectingKnowledgePerSheepdog>>' needs to have dll-interface to be used by clients of class 'Environment'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(109): message : see declaration of 'std::vector<expectedCollectingKnowledgePerSheepdog,std::allocator<expectedCollectingKnowledgePerSheepdog>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(110,82): warning C4251: 'Environment::sheepdogsSharedDrivingKnowledge': class 'std::vector<expectedDrivingKnowledgePerSheepdog,std::allocator<expectedDrivingKnowledgePerSheepdog>>' needs to have dll-interface to be used by clients of class 'Environment'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(110): message : see declaration of 'std::vector<expectedDrivingKnowledgePerSheepdog,std::allocator<expectedDrivingKnowledgePerSheepdog>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(119,36): warning C4251: 'Environment::coveringPoints': class 'std::list<Vector2f,std::allocator<Vector2f>>' needs to have dll-interface to be used by clients of class 'Environment'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(119): message : see declaration of 'std::list<Vector2f,std::allocator<Vector2f>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Flock.cpp(63,21): warning C4018: '<': signed/unsigned mismatch
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Flock.cpp(281,22): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Flock.cpp(285,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Flock.cpp(367,14): warning C4018: '<': signed/unsigned mismatch
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Flock.cpp(387,52): warning C4018: '<': signed/unsigned mismatch
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Flock.cpp(424,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Flock.cpp(428,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Modules.cpp
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Behaviors.h(27,27): warning C4251: 'Behavior::behaviorType': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Behavior'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\xstring(4575): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Behaviors.h(42,2): warning C4251: 'std::list<Behavior *,std::allocator<Behavior *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::list<Behavior *,std::allocator<Behavior *>>'
+          with
+          [
+              _Ty=Behavior *,
+              _Alloc=std::allocator<Behavior *>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\list(1797): message : see declaration of 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=Behavior *,
+              _Alloc=std::allocator<Behavior *>
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(59,23): warning C4251: 'Agent::agentType': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Agent'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\xstring(4575): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(63,21): warning C4251: 'Agent::position_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(67,22): warning C4251: 'Agent::position_t1': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(71,19): warning C4251: 'Agent::Lambda_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(85,14): warning C4251: 'Agent::F_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(86,19): warning C4251: 'Agent::F_obst_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(88,42): warning C4251: 'Agent::LoggingSupportingInformation': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Agent'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\xstring(4575): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(101,45): warning C4251: 'Agent::DetectedSheep': class 'std::vector<DetectedSheepRow,std::allocator<DetectedSheepRow>>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(96): message : see declaration of 'std::vector<DetectedSheepRow,std::allocator<DetectedSheepRow>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepAgent.h(25,26): warning C4251: 'SheepAgent::F_pi_i_beta_j_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepAgent.h(28,24): warning C4251: 'SheepAgent::F_pi_i_pi_k_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepAgent.h(30,26): warning C4251: 'SheepAgent::F_pi_i_Lambda_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepAgent.h(32,21): warning C4251: 'SheepAgent::F_pi_i_E_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(25,23): warning C4251: 'SheepDogAgent::F_beta_j_c_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(26,23): warning C4251: 'SheepDogAgent::F_beta_j_d_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(27,24): warning C4251: 'SheepDogAgent::F_beta_j_E_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(28,28): warning C4251: 'SheepDogAgent::F_beta_i_beta_k_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(29,23): warning C4251: 'SheepDogAgent::P_beta_j_d_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(30,23): warning C4251: 'SheepDogAgent::P_beta_j_c_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(32,24): warning C4251: 'SheepDogAgent::P_beta_j_cv_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(33,24): warning C4251: 'SheepDogAgent::F_beta_j_cv_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(15,27): warning C4251: 'Obstacle::position_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Obstacle'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(30,22): warning C4251: 'DynamicObstacle::position_t1': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'DynamicObstacle'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(49,1): warning C4251: 'std::vector<StaticObstacle *,std::allocator<StaticObstacle *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<StaticObstacle *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::vector<StaticObstacle *,std::allocator<StaticObstacle *>>'
+          with
+          [
+              _Ty=StaticObstacle *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\vector(1749): message : see declaration of 'std::_Compressed_pair<std::allocator<StaticObstacle *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=StaticObstacle *
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(57,1): warning C4251: 'std::list<DynamicObstacle *,std::allocator<DynamicObstacle *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::list<DynamicObstacle *,std::allocator<DynamicObstacle *>>'
+          with
+          [
+              _Ty=DynamicObstacle *,
+              _Alloc=std::allocator<DynamicObstacle *>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\list(1797): message : see declaration of 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=DynamicObstacle *,
+              _Alloc=std::allocator<DynamicObstacle *>
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(61,1): warning C4251: 'std::list<Fence *,std::allocator<Fence *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::list<Fence *,std::allocator<Fence *>>'
+          with
+          [
+              _Ty=Fence *,
+              _Alloc=std::allocator<Fence *>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\list(1797): message : see declaration of 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=Fence *,
+              _Alloc=std::allocator<Fence *>
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(96,13): warning C4251: 'Environment::PG': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Environment'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(108,51): warning C4251: 'Environment::SheepDogRoster': class 'std::vector<SheepDogRosterDatarow,std::allocator<SheepDogRosterDatarow>>' needs to have dll-interface to be used by clients of class 'Environment'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(108): message : see declaration of 'std::vector<SheepDogRosterDatarow,std::allocator<SheepDogRosterDatarow>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(109,88): warning C4251: 'Environment::sheepdogsSharedCollectingKnowledge': class 'std::vector<expectedCollectingKnowledgePerSheepdog,std::allocator<expectedCollectingKnowledgePerSheepdog>>' needs to have dll-interface to be used by clients of class 'Environment'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(109): message : see declaration of 'std::vector<expectedCollectingKnowledgePerSheepdog,std::allocator<expectedCollectingKnowledgePerSheepdog>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(110,82): warning C4251: 'Environment::sheepdogsSharedDrivingKnowledge': class 'std::vector<expectedDrivingKnowledgePerSheepdog,std::allocator<expectedDrivingKnowledgePerSheepdog>>' needs to have dll-interface to be used by clients of class 'Environment'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(110): message : see declaration of 'std::vector<expectedDrivingKnowledgePerSheepdog,std::allocator<expectedDrivingKnowledgePerSheepdog>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(119,36): warning C4251: 'Environment::coveringPoints': class 'std::list<Vector2f,std::allocator<Vector2f>>' needs to have dll-interface to be used by clients of class 'Environment'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Modules.h(15): message : see declaration of 'std::list<Vector2f,std::allocator<Vector2f>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Modules.cpp(92,35): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Modules.cpp(92,32): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Modules.cpp(97,72): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Modules.cpp(97,47): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Modules.cpp(128,21): warning C4018: '<': signed/unsigned mismatch
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Modules.cpp(136,21): warning C4018: '<': signed/unsigned mismatch
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Modules.cpp(150,21): warning C4018: '<': signed/unsigned mismatch
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Modules.cpp(152,54): warning C4244: 'argument': conversion from 'double' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Modules.cpp(153,55): warning C4244: 'argument': conversion from 'double' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Modules.cpp(160,21): warning C4018: '<': signed/unsigned mismatch
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Modules.cpp(195,20): warning C4244: 'argument': conversion from 'double' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Modules.cpp(199,20): warning C4244: 'argument': conversion from 'double' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Modules.cpp(203,20): warning C4244: 'argument': conversion from 'double' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Modules.cpp(207,20): warning C4244: 'argument': conversion from 'double' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Modules.cpp(213,20): warning C4244: 'argument': conversion from 'double' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Modules.cpp(217,20): warning C4244: 'argument': conversion from 'double' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Modules.cpp(221,20): warning C4244: 'argument': conversion from 'double' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Modules.cpp(225,20): warning C4244: 'argument': conversion from 'double' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Modules.cpp(230,21): warning C4018: '<': signed/unsigned mismatch
+  SheepAgent.cpp
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Behaviors.h(27,27): warning C4251: 'Behavior::behaviorType': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Behavior'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\xstring(4575): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Behaviors.h(42,2): warning C4251: 'std::list<Behavior *,std::allocator<Behavior *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::list<Behavior *,std::allocator<Behavior *>>'
+          with
+          [
+              _Ty=Behavior *,
+              _Alloc=std::allocator<Behavior *>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\list(1797): message : see declaration of 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=Behavior *,
+              _Alloc=std::allocator<Behavior *>
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(59,23): warning C4251: 'Agent::agentType': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Agent'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\xstring(4575): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(63,21): warning C4251: 'Agent::position_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(67,22): warning C4251: 'Agent::position_t1': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(71,19): warning C4251: 'Agent::Lambda_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(85,14): warning C4251: 'Agent::F_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(86,19): warning C4251: 'Agent::F_obst_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(88,42): warning C4251: 'Agent::LoggingSupportingInformation': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Agent'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\xstring(4575): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(101,45): warning C4251: 'Agent::DetectedSheep': class 'std::vector<DetectedSheepRow,std::allocator<DetectedSheepRow>>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(96): message : see declaration of 'std::vector<DetectedSheepRow,std::allocator<DetectedSheepRow>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepAgent.h(25,26): warning C4251: 'SheepAgent::F_pi_i_beta_j_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepAgent.h(28,24): warning C4251: 'SheepAgent::F_pi_i_pi_k_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepAgent.h(30,26): warning C4251: 'SheepAgent::F_pi_i_Lambda_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepAgent.h(32,21): warning C4251: 'SheepAgent::F_pi_i_E_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(15,27): warning C4251: 'Obstacle::position_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Obstacle'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(30,22): warning C4251: 'DynamicObstacle::position_t1': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'DynamicObstacle'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(49,1): warning C4251: 'std::vector<StaticObstacle *,std::allocator<StaticObstacle *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<StaticObstacle *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::vector<StaticObstacle *,std::allocator<StaticObstacle *>>'
+          with
+          [
+              _Ty=StaticObstacle *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\vector(1749): message : see declaration of 'std::_Compressed_pair<std::allocator<StaticObstacle *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=StaticObstacle *
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(57,1): warning C4251: 'std::list<DynamicObstacle *,std::allocator<DynamicObstacle *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::list<DynamicObstacle *,std::allocator<DynamicObstacle *>>'
+          with
+          [
+              _Ty=DynamicObstacle *,
+              _Alloc=std::allocator<DynamicObstacle *>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\list(1797): message : see declaration of 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=DynamicObstacle *,
+              _Alloc=std::allocator<DynamicObstacle *>
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(61,1): warning C4251: 'std::list<Fence *,std::allocator<Fence *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::list<Fence *,std::allocator<Fence *>>'
+          with
+          [
+              _Ty=Fence *,
+              _Alloc=std::allocator<Fence *>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\list(1797): message : see declaration of 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=Fence *,
+              _Alloc=std::allocator<Fence *>
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(96,13): warning C4251: 'Environment::PG': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Environment'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(108,51): warning C4251: 'Environment::SheepDogRoster': class 'std::vector<SheepDogRosterDatarow,std::allocator<SheepDogRosterDatarow>>' needs to have dll-interface to be used by clients of class 'Environment'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(108): message : see declaration of 'std::vector<SheepDogRosterDatarow,std::allocator<SheepDogRosterDatarow>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(109,88): warning C4251: 'Environment::sheepdogsSharedCollectingKnowledge': class 'std::vector<expectedCollectingKnowledgePerSheepdog,std::allocator<expectedCollectingKnowledgePerSheepdog>>' needs to have dll-interface to be used by clients of class 'Environment'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(109): message : see declaration of 'std::vector<expectedCollectingKnowledgePerSheepdog,std::allocator<expectedCollectingKnowledgePerSheepdog>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(110,82): warning C4251: 'Environment::sheepdogsSharedDrivingKnowledge': class 'std::vector<expectedDrivingKnowledgePerSheepdog,std::allocator<expectedDrivingKnowledgePerSheepdog>>' needs to have dll-interface to be used by clients of class 'Environment'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(110): message : see declaration of 'std::vector<expectedDrivingKnowledgePerSheepdog,std::allocator<expectedDrivingKnowledgePerSheepdog>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(119,36): warning C4251: 'Environment::coveringPoints': class 'std::list<Vector2f,std::allocator<Vector2f>>' needs to have dll-interface to be used by clients of class 'Environment'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(119): message : see declaration of 'std::list<Vector2f,std::allocator<Vector2f>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(25,23): warning C4251: 'SheepDogAgent::F_beta_j_c_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(26,23): warning C4251: 'SheepDogAgent::F_beta_j_d_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(27,24): warning C4251: 'SheepDogAgent::F_beta_j_E_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(28,28): warning C4251: 'SheepDogAgent::F_beta_i_beta_k_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(29,23): warning C4251: 'SheepDogAgent::P_beta_j_d_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(30,23): warning C4251: 'SheepDogAgent::P_beta_j_c_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(32,24): warning C4251: 'SheepDogAgent::P_beta_j_cv_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(33,24): warning C4251: 'SheepDogAgent::F_beta_j_cv_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Flock.h(18,61): warning C4251: 'std::vector<SheepAgent *,std::allocator<SheepAgent *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<SheepAgent *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::vector<SheepAgent *,std::allocator<SheepAgent *>>'
+          with
+          [
+              _Ty=SheepAgent *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\vector(1749): message : see declaration of 'std::_Compressed_pair<std::allocator<SheepAgent *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=SheepAgent *
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Flock.h(31,67): warning C4251: 'std::vector<SheepDogAgent *,std::allocator<SheepDogAgent *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<SheepDogAgent *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::vector<SheepDogAgent *,std::allocator<SheepDogAgent *>>'
+          with
+          [
+              _Ty=SheepDogAgent *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\vector(1749): message : see declaration of 'std::_Compressed_pair<std::allocator<SheepDogAgent *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=SheepDogAgent *
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(47,27): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(46): message : while compiling class template member function 'Vector2<float> Vector2<float>::operator *(double)'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepAgent.cpp(62): message : see reference to function template instantiation 'Vector2<float> Vector2<float>::operator *(double)' being compiled
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(37): message : see reference to class template instantiation 'Vector2<float>' being compiled
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(47,20): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(65,1): warning C4244: '*=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(64): message : while compiling class template member function 'Vector2<float> &Vector2<float>::operator *=(double)'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(92): message : see reference to function template instantiation 'Vector2<float> &Vector2<float>::operator *=(double)' being compiled
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(66,1): warning C4244: '*=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  SheepDogAgent.cpp
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Behaviors.h(27,27): warning C4251: 'Behavior::behaviorType': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Behavior'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\xstring(4575): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Behaviors.h(42,2): warning C4251: 'std::list<Behavior *,std::allocator<Behavior *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::list<Behavior *,std::allocator<Behavior *>>'
+          with
+          [
+              _Ty=Behavior *,
+              _Alloc=std::allocator<Behavior *>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\list(1797): message : see declaration of 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=Behavior *,
+              _Alloc=std::allocator<Behavior *>
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(59,23): warning C4251: 'Agent::agentType': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Agent'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\xstring(4575): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(63,21): warning C4251: 'Agent::position_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(67,22): warning C4251: 'Agent::position_t1': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(71,19): warning C4251: 'Agent::Lambda_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(85,14): warning C4251: 'Agent::F_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(86,19): warning C4251: 'Agent::F_obst_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(88,42): warning C4251: 'Agent::LoggingSupportingInformation': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Agent'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\xstring(4575): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(101,45): warning C4251: 'Agent::DetectedSheep': class 'std::vector<DetectedSheepRow,std::allocator<DetectedSheepRow>>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(96): message : see declaration of 'std::vector<DetectedSheepRow,std::allocator<DetectedSheepRow>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepAgent.h(25,26): warning C4251: 'SheepAgent::F_pi_i_beta_j_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepAgent.h(28,24): warning C4251: 'SheepAgent::F_pi_i_pi_k_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepAgent.h(30,26): warning C4251: 'SheepAgent::F_pi_i_Lambda_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepAgent.h(32,21): warning C4251: 'SheepAgent::F_pi_i_E_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(25,23): warning C4251: 'SheepDogAgent::F_beta_j_c_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(26,23): warning C4251: 'SheepDogAgent::F_beta_j_d_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(27,24): warning C4251: 'SheepDogAgent::F_beta_j_E_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(28,28): warning C4251: 'SheepDogAgent::F_beta_i_beta_k_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(29,23): warning C4251: 'SheepDogAgent::P_beta_j_d_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(30,23): warning C4251: 'SheepDogAgent::P_beta_j_c_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(32,24): warning C4251: 'SheepDogAgent::P_beta_j_cv_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(33,24): warning C4251: 'SheepDogAgent::F_beta_j_cv_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(15,27): warning C4251: 'Obstacle::position_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Obstacle'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(30,22): warning C4251: 'DynamicObstacle::position_t1': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'DynamicObstacle'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(49,1): warning C4251: 'std::vector<StaticObstacle *,std::allocator<StaticObstacle *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<StaticObstacle *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::vector<StaticObstacle *,std::allocator<StaticObstacle *>>'
+          with
+          [
+              _Ty=StaticObstacle *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\vector(1749): message : see declaration of 'std::_Compressed_pair<std::allocator<StaticObstacle *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=StaticObstacle *
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(57,1): warning C4251: 'std::list<DynamicObstacle *,std::allocator<DynamicObstacle *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::list<DynamicObstacle *,std::allocator<DynamicObstacle *>>'
+          with
+          [
+              _Ty=DynamicObstacle *,
+              _Alloc=std::allocator<DynamicObstacle *>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\list(1797): message : see declaration of 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=DynamicObstacle *,
+              _Alloc=std::allocator<DynamicObstacle *>
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(61,1): warning C4251: 'std::list<Fence *,std::allocator<Fence *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::list<Fence *,std::allocator<Fence *>>'
+          with
+          [
+              _Ty=Fence *,
+              _Alloc=std::allocator<Fence *>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\list(1797): message : see declaration of 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=Fence *,
+              _Alloc=std::allocator<Fence *>
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(96,13): warning C4251: 'Environment::PG': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Environment'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(108,51): warning C4251: 'Environment::SheepDogRoster': class 'std::vector<SheepDogRosterDatarow,std::allocator<SheepDogRosterDatarow>>' needs to have dll-interface to be used by clients of class 'Environment'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(108): message : see declaration of 'std::vector<SheepDogRosterDatarow,std::allocator<SheepDogRosterDatarow>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(109,88): warning C4251: 'Environment::sheepdogsSharedCollectingKnowledge': class 'std::vector<expectedCollectingKnowledgePerSheepdog,std::allocator<expectedCollectingKnowledgePerSheepdog>>' needs to have dll-interface to be used by clients of class 'Environment'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(109): message : see declaration of 'std::vector<expectedCollectingKnowledgePerSheepdog,std::allocator<expectedCollectingKnowledgePerSheepdog>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(110,82): warning C4251: 'Environment::sheepdogsSharedDrivingKnowledge': class 'std::vector<expectedDrivingKnowledgePerSheepdog,std::allocator<expectedDrivingKnowledgePerSheepdog>>' needs to have dll-interface to be used by clients of class 'Environment'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(110): message : see declaration of 'std::vector<expectedDrivingKnowledgePerSheepdog,std::allocator<expectedDrivingKnowledgePerSheepdog>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(119,36): warning C4251: 'Environment::coveringPoints': class 'std::list<Vector2f,std::allocator<Vector2f>>' needs to have dll-interface to be used by clients of class 'Environment'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(119): message : see declaration of 'std::list<Vector2f,std::allocator<Vector2f>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Flock.h(18,61): warning C4251: 'std::vector<SheepAgent *,std::allocator<SheepAgent *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<SheepAgent *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::vector<SheepAgent *,std::allocator<SheepAgent *>>'
+          with
+          [
+              _Ty=SheepAgent *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\vector(1749): message : see declaration of 'std::_Compressed_pair<std::allocator<SheepAgent *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=SheepAgent *
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Flock.h(31,67): warning C4251: 'std::vector<SheepDogAgent *,std::allocator<SheepDogAgent *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<SheepDogAgent *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::vector<SheepDogAgent *,std::allocator<SheepDogAgent *>>'
+          with
+          [
+              _Ty=SheepDogAgent *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\vector(1749): message : see declaration of 'std::_Compressed_pair<std::allocator<SheepDogAgent *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=SheepDogAgent *
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.cpp(19,20): warning C4018: '<': signed/unsigned mismatch
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.cpp(40,24): warning C4018: '<': signed/unsigned mismatch
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.cpp(76,20): warning C4018: '<': signed/unsigned mismatch
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.cpp(178,12): warning C4018: '<': signed/unsigned mismatch
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(47,27): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(46): message : while compiling class template member function 'Vector2<float> Vector2<float>::operator *(double)'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.cpp(128): message : see reference to function template instantiation 'Vector2<float> Vector2<float>::operator *(double)' being compiled
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(37): message : see reference to class template instantiation 'Vector2<float>' being compiled
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(47,20): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  ShepherdingLibC.cpp
+  Terrain.cpp
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(15,27): warning C4251: 'Obstacle::position_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Obstacle'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(30,22): warning C4251: 'DynamicObstacle::position_t1': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'DynamicObstacle'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(49,1): warning C4251: 'std::vector<StaticObstacle *,std::allocator<StaticObstacle *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<StaticObstacle *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::vector<StaticObstacle *,std::allocator<StaticObstacle *>>'
+          with
+          [
+              _Ty=StaticObstacle *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\vector(1749): message : see declaration of 'std::_Compressed_pair<std::allocator<StaticObstacle *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=StaticObstacle *
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(57,1): warning C4251: 'std::list<DynamicObstacle *,std::allocator<DynamicObstacle *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::list<DynamicObstacle *,std::allocator<DynamicObstacle *>>'
+          with
+          [
+              _Ty=DynamicObstacle *,
+              _Alloc=std::allocator<DynamicObstacle *>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\list(1797): message : see declaration of 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=DynamicObstacle *,
+              _Alloc=std::allocator<DynamicObstacle *>
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(61,1): warning C4251: 'std::list<Fence *,std::allocator<Fence *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::list<Fence *,std::allocator<Fence *>>'
+          with
+          [
+              _Ty=Fence *,
+              _Alloc=std::allocator<Fence *>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\list(1797): message : see declaration of 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=Fence *,
+              _Alloc=std::allocator<Fence *>
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.cpp(8,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.cpp(9,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.cpp(14,57): warning C4244: 'argument': conversion from 'float' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.cpp(14,51): warning C4244: 'argument': conversion from 'float' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.cpp(15,57): warning C4244: 'argument': conversion from 'float' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.cpp(15,51): warning C4244: 'argument': conversion from 'float' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.cpp(18,12): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.cpp(19,12): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  Time.cpp
+  Traits.cpp
+  Utilities.cpp
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Behaviors.h(27,27): warning C4251: 'Behavior::behaviorType': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Behavior'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\xstring(4575): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Behaviors.h(42,2): warning C4251: 'std::list<Behavior *,std::allocator<Behavior *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::list<Behavior *,std::allocator<Behavior *>>'
+          with
+          [
+              _Ty=Behavior *,
+              _Alloc=std::allocator<Behavior *>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\list(1797): message : see declaration of 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=Behavior *,
+              _Alloc=std::allocator<Behavior *>
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(59,23): warning C4251: 'Agent::agentType': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Agent'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\xstring(4575): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(63,21): warning C4251: 'Agent::position_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(67,22): warning C4251: 'Agent::position_t1': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(71,19): warning C4251: 'Agent::Lambda_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(85,14): warning C4251: 'Agent::F_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(86,19): warning C4251: 'Agent::F_obst_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(88,42): warning C4251: 'Agent::LoggingSupportingInformation': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Agent'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\xstring(4575): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(101,45): warning C4251: 'Agent::DetectedSheep': class 'std::vector<DetectedSheepRow,std::allocator<DetectedSheepRow>>' needs to have dll-interface to be used by clients of class 'Agent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Agents.h(96): message : see declaration of 'std::vector<DetectedSheepRow,std::allocator<DetectedSheepRow>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepAgent.h(25,26): warning C4251: 'SheepAgent::F_pi_i_beta_j_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepAgent.h(28,24): warning C4251: 'SheepAgent::F_pi_i_pi_k_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepAgent.h(30,26): warning C4251: 'SheepAgent::F_pi_i_Lambda_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepAgent.h(32,21): warning C4251: 'SheepAgent::F_pi_i_E_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(25,23): warning C4251: 'SheepDogAgent::F_beta_j_c_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(26,23): warning C4251: 'SheepDogAgent::F_beta_j_d_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(27,24): warning C4251: 'SheepDogAgent::F_beta_j_E_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(28,28): warning C4251: 'SheepDogAgent::F_beta_i_beta_k_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(29,23): warning C4251: 'SheepDogAgent::P_beta_j_d_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(30,23): warning C4251: 'SheepDogAgent::P_beta_j_c_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(32,24): warning C4251: 'SheepDogAgent::P_beta_j_cv_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\SheepDogAgent.h(33,24): warning C4251: 'SheepDogAgent::F_beta_j_cv_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'SheepDogAgent'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Flock.h(18,61): warning C4251: 'std::vector<SheepAgent *,std::allocator<SheepAgent *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<SheepAgent *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::vector<SheepAgent *,std::allocator<SheepAgent *>>'
+          with
+          [
+              _Ty=SheepAgent *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\vector(1749): message : see declaration of 'std::_Compressed_pair<std::allocator<SheepAgent *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=SheepAgent *
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Flock.h(31,67): warning C4251: 'std::vector<SheepDogAgent *,std::allocator<SheepDogAgent *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<SheepDogAgent *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::vector<SheepDogAgent *,std::allocator<SheepDogAgent *>>'
+          with
+          [
+              _Ty=SheepDogAgent *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\vector(1749): message : see declaration of 'std::_Compressed_pair<std::allocator<SheepDogAgent *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=SheepDogAgent *
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(15,27): warning C4251: 'Obstacle::position_t': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Obstacle'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(30,22): warning C4251: 'DynamicObstacle::position_t1': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'DynamicObstacle'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(49,1): warning C4251: 'std::vector<StaticObstacle *,std::allocator<StaticObstacle *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<StaticObstacle *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::vector<StaticObstacle *,std::allocator<StaticObstacle *>>'
+          with
+          [
+              _Ty=StaticObstacle *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\vector(1749): message : see declaration of 'std::_Compressed_pair<std::allocator<StaticObstacle *>,std::_Vector_val<std::_Simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=StaticObstacle *
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(57,1): warning C4251: 'std::list<DynamicObstacle *,std::allocator<DynamicObstacle *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::list<DynamicObstacle *,std::allocator<DynamicObstacle *>>'
+          with
+          [
+              _Ty=DynamicObstacle *,
+              _Alloc=std::allocator<DynamicObstacle *>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\list(1797): message : see declaration of 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=DynamicObstacle *,
+              _Alloc=std::allocator<DynamicObstacle *>
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Terrain.h(61,1): warning C4251: 'std::list<Fence *,std::allocator<Fence *>>::_Mypair': class 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>' needs to have dll-interface to be used by clients of class 'std::list<Fence *,std::allocator<Fence *>>'
+          with
+          [
+              _Ty=Fence *,
+              _Alloc=std::allocator<Fence *>
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include\list(1797): message : see declaration of 'std::_Compressed_pair<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>,std::_List_val<std::_List_simple_types<_Ty>>,true>'
+          with
+          [
+              _Ty=Fence *,
+              _Alloc=std::allocator<Fence *>
+          ]
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(96,13): warning C4251: 'Environment::PG': class 'Vector2<float>' needs to have dll-interface to be used by clients of class 'Environment'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Vector2.h(122): message : see declaration of 'Vector2<float>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(108,51): warning C4251: 'Environment::SheepDogRoster': class 'std::vector<SheepDogRosterDatarow,std::allocator<SheepDogRosterDatarow>>' needs to have dll-interface to be used by clients of class 'Environment'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(108): message : see declaration of 'std::vector<SheepDogRosterDatarow,std::allocator<SheepDogRosterDatarow>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(109,88): warning C4251: 'Environment::sheepdogsSharedCollectingKnowledge': class 'std::vector<expectedCollectingKnowledgePerSheepdog,std::allocator<expectedCollectingKnowledgePerSheepdog>>' needs to have dll-interface to be used by clients of class 'Environment'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(109): message : see declaration of 'std::vector<expectedCollectingKnowledgePerSheepdog,std::allocator<expectedCollectingKnowledgePerSheepdog>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(110,82): warning C4251: 'Environment::sheepdogsSharedDrivingKnowledge': class 'std::vector<expectedDrivingKnowledgePerSheepdog,std::allocator<expectedDrivingKnowledgePerSheepdog>>' needs to have dll-interface to be used by clients of class 'Environment'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(110): message : see declaration of 'std::vector<expectedDrivingKnowledgePerSheepdog,std::allocator<expectedDrivingKnowledgePerSheepdog>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(119,36): warning C4251: 'Environment::coveringPoints': class 'std::list<Vector2f,std::allocator<Vector2f>>' needs to have dll-interface to be used by clients of class 'Environment'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Environment.h(119): message : see declaration of 'std::list<Vector2f,std::allocator<Vector2f>>'
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Utilities.cpp(29,20): warning C4018: '<': signed/unsigned mismatch
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Utilities.cpp(47,20): warning C4018: '<': signed/unsigned mismatch
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Utilities.cpp(75,34): warning C4018: '<': signed/unsigned mismatch
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Utilities.cpp(89,34): warning C4018: '<': signed/unsigned mismatch
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Utilities.cpp(117,20): warning C4018: '<': signed/unsigned mismatch
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Utilities.cpp(198,20): warning C4018: '<': signed/unsigned mismatch
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Utilities.cpp(220,20): warning C4018: '<': signed/unsigned mismatch
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Utilities.cpp(239,20): warning C4018: '<': signed/unsigned mismatch
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Utilities.cpp(264,20): warning C4018: '<': signed/unsigned mismatch
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Utilities.cpp(281,20): warning C4018: '<': signed/unsigned mismatch
+D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\ShepherdingLibC\Utilities.cpp(350,20): warning C4018: '<': signed/unsigned mismatch
+LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
+     Creating library D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\Release\ShepherdingLibC.lib and object D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\Release\ShepherdingLibC.exp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 2371 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  ShepherdingLibC.vcxproj -> D:\ONRG\ShepherdingCodes\GitHubCopy\Shepherding\Release\ShepherdingLibC.dll

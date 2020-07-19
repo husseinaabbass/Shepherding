@@ -44,11 +44,11 @@ struct SheepDogRosterDatarow {
 };
 
 struct expectedDrivingKnowledgePerSheepdog {
-	int dogID;
-	std::string dogName;
-	int RefDogID;
-	std::string dogLocationRelevant2RefDog;
-	Vector2f dogCurrentLocation;
+	int dogID;   //this dog id
+	std::string dogName; // which defines its role C, CL,CR, CLL,..
+	int RefDogID; // which dog this dog will aligns to. For example Sheepdog CLL will align itself left to the sheepdog CL. Therefore, CL sheepdog ID will be stored in this field.
+	std::string dogLocationRelevant2RefDog;  // left or right
+	Vector2f dogCurrentLocation; 
 	Vector2f GCM;
 };
 
@@ -69,6 +69,9 @@ public:
 	static Environment& getInstance();
 	//Environment(const Environment&) = default;
 //	Environment& operator=(const Environment&) = default;
+	int currentTime;
+	int FieldStartX;
+	int FieldStartY;
 	int FieldWidth;
 	int FieldHeight;
 	int N;					//(1--201)           & Cardinality of Pi
@@ -78,6 +81,7 @@ public:
 	float Rs_pi_pi;			// (20u)				& pi collision avoidance range for pi
 
 	float R_beta_beta ;// 10			// (2u)				& beta sensing range for beta
+	float R_beta_pi;// 65			// (65u)				& beta sensing range for pi
 	int	card_Omega_pi_pi;	// 					& Number of  agents(neighbourhood) a sheep agent operates on
 	int card_Omega_beta_pi;//					& Number of  agents(neighbourhood) a sheepDog agent operates on
 	float W_pi_pi;			// (2)				& pi repulsion strength from pi
@@ -110,6 +114,9 @@ public:
 	Terrain terrain;
 	Communication communication;
 	Atmosphere atmosphere;
+
+	bool openCoveringTask; // a flag to keep track of open covering tasks.
+	std::list<Vector2f> coveringPoints; // a keeper for the covering point to do if needed.
 
 	//Vector2f paddockLength;
 	//Vector2f paddockWidth;

@@ -1,8 +1,8 @@
 Random Numbers Seed : 0
 Visualisation : 1
 Simulation Speed: 1
-ScreenWidth in Pixels: 800
-Screen Height in Pixels: 800
+ScreenWidth in Pixels: 600
+Screen Height in Pixels: 600
 Field Length and Width: 50
 Goal LocationX: 25
 Goal LocationT: 50
@@ -11,12 +11,12 @@ Paddock Length: 30
 paddock Width: 30
 Goal Radius: 10
 N: 100
-M: 2
+M: 1
 R_pi_beta: 65
 Ra_pi_pi: 0.4
 Rs_pi_pi: 3
-card_Omega_pi_pi: 9
-card_Omega_beta_pi: 10
+card_Omega_pi_pi: 99
+card_Omega_beta_pi: 100
 W_pi_pi: 2
 W_pi_beta: 1
 W_pi_Lambda: 1.05
@@ -26,6 +26,7 @@ W_e_beta_j: 0.3
 S_t_beta_j: 2
 eta: 0.05
 R_beta_beta: 2
+R_beta_pi: 20
 W_beta_beta: 0.5
 DrivingPositionEq1
 CollectingPositionEq1
@@ -47,5 +48,5 @@ sheepDogInitializationStartingX: 15
 sheepDogInitializationStartingY: 15
 sheepDogInitializationXRange: 20
 sheepDogInitializationYRange: 5
-ObstaclesDensity: 0.001
+ObstaclesDensity: 0
 ObstaclesRadius: 1

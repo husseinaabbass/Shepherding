@@ -93,7 +93,7 @@ Simulation::~Simulation()
 //	};
 //
 //}
-void Simulation::init(int randomNumberSeed, int numSheepAgents, int numSheepDogAgents, int fieldStartX, int fieldStartY, int fieldWidth, int fieldHeight, float R_pi_beta, float Ra_pi_pi,float Rs_pi_pi, float R_beta_beta, float W_pi_pi, float W_beta_beta, float W_pi_beta, float W_pi_Lambda, float W_pi_upsilon, float W_e_pi_i, float W_e_beta_j, float S_t_beta_j, float eta, int card_Omega_pi_pi, int card_Omega_beta_pi, int goalLocX, int goalLocY, int paddockLength, int paddockWidth, bool paddockON, bool CircularPathPlanningON, bool StallingON, float StallingDistance, int R2, int r3, int GoalRadius, int ForceRegulated, int fNequation, int DrivingPositionEq, int CollectingPositionEq, int SheepNeignborhoodSelection, int ModulationDecayFactor, int sheepInitializationStartingX, int sheepInitializationStartingY, int sheepInitializationXRange, int sheepInitializationYRange, std::string sheepInitializationPattern, int sheepDogInitializationStartingX, int sheepDogInitializationStartingY, int sheepDogInitializationXRange, int sheepDogInitializationYRange, float obstaclesDensity, float obstaclesRadius)
+void Simulation::init(int randomNumberSeed, int numSheepAgents, int numSheepDogAgents, int fieldStartX, int fieldStartY, int fieldWidth, int fieldHeight, float R_pi_beta, float Ra_pi_pi, float Rs_pi_pi, float R_beta_beta, float R_beta_pi, float W_pi_pi, float W_beta_beta, float W_pi_beta, float W_pi_Lambda, float W_pi_upsilon, float W_e_pi_i, float W_e_beta_j, float S_t_beta_j, float eta, int card_Omega_pi_pi, int card_Omega_beta_pi, int goalLocX, int goalLocY, int paddockLength, int paddockWidth, bool paddockON, bool CircularPathPlanningON, bool StallingON, float StallingDistance, int R2, int r3, int GoalRadius, int ForceRegulated, int fNequation, int DrivingPositionEq, int CollectingPositionEq, int SheepNeignborhoodSelection, int ModulationDecayFactor, int sheepInitializationStartingX, int sheepInitializationStartingY, int sheepInitializationXRange, int sheepInitializationYRange, std::string sheepInitializationPattern, int sheepDogInitializationStartingX, int sheepDogInitializationStartingY, int sheepDogInitializationXRange, int sheepDogInitializationYRange, float obstaclesDensity, float obstaclesRadius)
 {
 	std::mt19937 generator(randomNumberSeed);
 
@@ -111,16 +111,19 @@ void Simulation::init(int randomNumberSeed, int numSheepAgents, int numSheepDogA
 	//this->fieldHeight = fieldHeight;
 	this->paddockWidth = paddockWidth;
 	this->paddockLength = paddockLength;
-	
 
 
+	env.FieldStartX = fieldStartX;
+	env.FieldStartY = fieldStartY;
 
 	env.FieldHeight = fieldHeight;
 	env.FieldWidth = fieldWidth;
-	env.N= numSheepAgents;					//(1--201)           & Cardinality of Pi
-	env.M= numSheepDogAgents;					// (1--20)            & Cardinality of B
+	env.N = numSheepAgents;					//(1--201)           & Cardinality of Pi
+	env.M = numSheepDogAgents;					// (1--20)            & Cardinality of B
 	env.R_pi_beta = R_pi_beta;			// (65u)			& pi sensing range for beta
 	env.R_beta_beta = R_beta_beta;
+	env.R_beta_pi = R_beta_pi;
+
 	env.Ra_pi_pi = Ra_pi_pi;			// (2u)				& pi collision avoidance range for pi
 	env.Rs_pi_pi = Rs_pi_pi;
 	env.card_Omega_pi_pi = card_Omega_pi_pi;			//&Number of  agents(neighbourhood) a sheep agent operates on
@@ -138,11 +141,11 @@ void Simulation::init(int randomNumberSeed, int numSheepAgents, int numSheepDogA
 	//env.fN= env.Ra_pi_pi*pow(env.N, ((float)2 / (float)3));
 	if (fNequation == 1)
 	{
-		env.fN = env.Ra_pi_pi*sqrt(2*env.N);
+		env.fN = env.Ra_pi_pi * sqrt(2 * env.N);
 	}
 	if (fNequation == 0)
 	{
-		env.fN = env.Ra_pi_pi*pow(env.N, ((float)2 / (float)3));
+		env.fN = env.Ra_pi_pi * pow(env.N, ((float)2 / (float)3));
 	}
 
 	env.R1 = env.fN;
@@ -164,8 +167,8 @@ void Simulation::init(int randomNumberSeed, int numSheepAgents, int numSheepDogA
 
 	env.sheepDogFlock = new SheepDogFlock(generator, numSheepDogAgents, sheepDogInitializationStartingX, sheepDogInitializationStartingX + sheepDogInitializationXRange, sheepDogInitializationStartingY, sheepDogInitializationStartingY + sheepDogInitializationYRange, 1, S_t_beta_j);
 
-	env.sheepFlock = new SheepFlock(generator, numSheepAgents, sheepInitializationStartingX, sheepInitializationStartingX+sheepInitializationXRange,  sheepInitializationStartingY, sheepInitializationStartingY+ sheepInitializationYRange, env.M + 1, sheepInitializationPattern);
-	
+	env.sheepFlock = new SheepFlock(generator, numSheepAgents, sheepInitializationStartingX, sheepInitializationStartingX + sheepInitializationXRange, sheepInitializationStartingY, sheepInitializationStartingY + sheepInitializationYRange, env.M + 1, sheepInitializationPattern);
+
 	if (paddockON)
 	{
 		paddockBoundry = { Vector2f(env.PG.x - paddockWidth / 2, env.PG.y - paddockLength / 2) ,
@@ -174,7 +177,7 @@ void Simulation::init(int randomNumberSeed, int numSheepAgents, int numSheepDogA
 		Vector2f(env.PG.x - paddockWidth / 2, env.PG.y - paddockLength / 2 + paddockLength)
 		};
 	}
-	env.terrain.staticObstacles= new StaticObstaclesList(generator, obstaclesDensity, obstaclesRadius, fieldStartX, fieldStartX + fieldWidth, fieldStartY, fieldStartY + fieldHeight);
+	env.terrain.staticObstacles = new StaticObstaclesList(generator, obstaclesDensity, obstaclesRadius, fieldStartX, fieldStartX + fieldWidth, fieldStartY, fieldStartY + fieldHeight);
 }
 
 //Flock*  Simulation::init()
@@ -187,40 +190,43 @@ void Simulation::init(int randomNumberSeed, int numSheepAgents, int numSheepDogA
 void Simulation::update()
 {
 	Environment& env = Environment::getInstance();
-	
+	env.currentTime = timestep;
 	if (!goalFound)
 	{
-	env.sheepFlock->CalcNewLoc();
-	env.sheepDogFlock->CalcNewLoc();
-	if (circularPathPlanning)
-	{
-	//checkSheepDogNotDisturbingSheep(env.sheepDogFlock, env.sheepFlock,circularPathPlanningRadius, circularPathPlanningMode);
-	checkSheepDogNotDisturbingSheep(env.sheepDogFlock, env.sheepFlock);
-	}
-		
-	//before updating t1 to t. Check if moving from t to t1 is a valid move
+		//env.sheepFlock->CalcNewLoc();
+		//env.sheepDogFlock->CalcNewLoc();
 
-	if (paddockBoundry.size()>0)
-	{
-		CheckFenceViolation(paddockBoundry, env.sheepFlock, env.sheepDogFlock);
-	}
-	
-	
-	env.sheepFlock->Move();
-	env.sheepDogFlock->Move();
-	timestep = timestep + 1;
+		env.sheepFlock->CalcNewLoc();  // timestep may be used by behavior selection module; 
+											   // can be safely removed if not used in future implementation of the behavior selection module.
+		env.sheepDogFlock->CalcNewLoc();
+		if (circularPathPlanning)
+		{
+			checkSheepDogNotDisturbingSheep(env.sheepDogFlock, env.sheepFlock);
+		}
+
+		//before updating t1 to t. Check if moving from t to t1 is a valid move
+
+		if (paddockBoundry.size() > 0)
+		{
+			CheckFenceViolation(paddockBoundry, env.sheepFlock, env.sheepDogFlock);
+		}
+
+
+		env.sheepFlock->Move();
+		env.sheepDogFlock->Move();
+		timestep = timestep + 1;
 	}
 
 	checkIfGoalFound(); //Ours: Goal found if all sheep within radius from the goal
 	//checkIfGoalFound2(); //Strombom: Goal found based on distance between GCM and goal
-	
+
 
 }
 void Simulation::checkIfGoalFound()
 {
 	Environment& env = Environment::getInstance();
 	bool sheepAtGoal = true;
-	if (paddockBoundry.size()>0) //if there is a paddock, then if all sheep within paddock, task is complete.
+	if (paddockBoundry.size() > 0) //if there is a paddock, then if all sheep within paddock, task is complete.
 	{
 		int i = 0;
 		//bool test = false;
@@ -245,11 +251,11 @@ void Simulation::checkIfGoalFound()
 	else //if there is no paddock, then if all sheep within an x distance from the goal, then task is completed. this x is a radius around the goal point. We can use the paddock length parameter from the config file for radius.
 	{
 		int i = 0;
-		
+
 		while ((sheepAtGoal) && i < env.sheepFlock->size())
 		{
 
-			if ((*env.sheepFlock)[i]->position_t.dist(env.PG) > goalRadius )
+			if ((*env.sheepFlock)[i]->position_t.dist(env.PG) > goalRadius)
 			{
 				sheepAtGoal = false;
 			}
@@ -261,7 +267,7 @@ void Simulation::checkIfGoalFound()
 	{
 		goalFound = true;
 	}
-	
+
 }
 
 void Simulation::checkIfGoalFound2() //Strombom based on distance between GCM and goal
@@ -286,7 +292,7 @@ void Simulation::checkNotDisturbingSheep(float safeDist, SheepDogAgent* sheepDog
 	float TP[] = { sheepDog->position_t1.x, sheepDog->position_t1.y };
 	float theta_step = 0.1;
 	float TP_theta = atan2(TP[1] - LCM[1], TP[0] - LCM[0]);
-	
+
 	//check if the sheepDog is already so close to the driving or collecting position. if within small distance, allow them to break in the circle, otherwise, update their position.
 	Vector2f Pcd = Vector2f();
 	// 1. Identify if Driving or collecting, and retrieve the target position
@@ -300,6 +306,12 @@ void Simulation::checkNotDisturbingSheep(float safeDist, SheepDogAgent* sheepDog
 		Pcd.x = sheepDog->get_P_beta_j_d_t().x;
 		Pcd.y = sheepDog->get_P_beta_j_d_t().y;
 	}
+	else if (sheepDog->get_F_beta_j_cv_t().x != 0 && sheepDog->get_F_beta_j_cv_t().y != 0)
+	{
+		Pcd.x = sheepDog->get_P_beta_j_cv_t().x;
+		Pcd.y = sheepDog->get_P_beta_j_cv_t().y;
+	}
+
 	//2. Pcd theta 
 	float Pcd_theta = atan2(Pcd.y - LCM[1], Pcd.x - LCM[0]);
 	//if (std::abs(TP_theta - Pcd_theta) < 5 * theta_step)
@@ -309,7 +321,7 @@ void Simulation::checkNotDisturbingSheep(float safeDist, SheepDogAgent* sheepDog
 	//}
 	//else
 	float sheepDogNextDistance = sheepDog->position_t1.dist(sheepDog->Lambda_t);
-		if ((sheepDog->position_t1.dist(sheepDog->Lambda_t) < safeDist) && (std::abs(TP_theta - Pcd_theta) > 2 * theta_step))
+	if ((sheepDog->position_t1.dist(sheepDog->Lambda_t) < safeDist) && (std::abs(TP_theta - Pcd_theta) > 2 * theta_step))
 	{
 
 		/*printf(" SheepDog's next position is within %.2f distance from its LCM\n ", sheepDog->position_t1.dist(sheepDog->Lambda_t) );
@@ -319,7 +331,7 @@ void Simulation::checkNotDisturbingSheep(float safeDist, SheepDogAgent* sheepDog
 		printf("Difference should be be less than  %.2f \n ", 5 * theta_step);*/
 
 
-		float r = std::min(safeDist, sheepDog->position_t.dist(sheepDog->Lambda_t)+sheepDog->get_S_t_beta_j());
+		float r = std::min(safeDist, sheepDog->position_t.dist(sheepDog->Lambda_t) + sheepDog->get_S_t_beta_j());
 		float NP_cx;
 		float NP_cy;
 
@@ -330,7 +342,7 @@ void Simulation::checkNotDisturbingSheep(float safeDist, SheepDogAgent* sheepDog
 		float SP_cy = r * sin(SP_theta) + LCM[1];
 
 
-		
+
 		float TP_cx = r * cos(TP_theta) + LCM[0];
 		float TP_cy = r * sin(TP_theta) + LCM[1];
 
@@ -391,11 +403,11 @@ void Simulation::checkNotDisturbingSheep(float safeDist, SheepDogAgent* sheepDog
 				NP_cy = r * sin(NP_theta) + LCM[1];
 			}
 		}
-	/*	std::cout << "SheepDog ID " << std::to_string(sheepDog->agentID) << std::endl;
-		std::cout << "Safe Dist " << std::to_string(safeDist) << std::endl;
-		std::cout << "Next Pos Dist to GCM " << std::to_string(sheepDog->position_t1.dist(sheepDog->Lambda_t)) << std::endl;
-		printf(" SheepDog t1 has been updated from (%.2f , %.2f) to (%.2f , %.2f)\n ", sheepDog->position_t1.x, sheepDog->position_t1.y, NP_cx, NP_cy);
-		*/
+		/*	std::cout << "SheepDog ID " << std::to_string(sheepDog->agentID) << std::endl;
+			std::cout << "Safe Dist " << std::to_string(safeDist) << std::endl;
+			std::cout << "Next Pos Dist to GCM " << std::to_string(sheepDog->position_t1.dist(sheepDog->Lambda_t)) << std::endl;
+			printf(" SheepDog t1 has been updated from (%.2f , %.2f) to (%.2f , %.2f)\n ", sheepDog->position_t1.x, sheepDog->position_t1.y, NP_cx, NP_cy);
+			*/
 		sheepDog->position_t1 = Vector2f(NP_cx, NP_cy);
 		/*	std::cout << "Now the next Pos Dist to GCM " << std::to_string(sheepDog->position_t1.dist(sheepDog->Lambda_t)) << std::endl;
 
@@ -404,46 +416,43 @@ void Simulation::checkNotDisturbingSheep(float safeDist, SheepDogAgent* sheepDog
 	}
 }
 
-//void Simulation::checkSheepDogNotDisturbingSheep(SheepDogFlock * sheepDogFlock, SheepFlock * sheepFlock, int CircularPathPlanningRadius, int CircularPathPlanningMode)
-void Simulation::checkSheepDogNotDisturbingSheep(SheepDogFlock * sheepDogFlock, SheepFlock * sheepFlock)
+void Simulation::checkSheepDogNotDisturbingSheep(SheepDogFlock* sheepDogFlock, SheepFlock* sheepFlock)
 {
 	SheepDogFlock::iterator sheepDogIter;
 	for (sheepDogIter = sheepDogFlock->begin(); sheepDogIter != sheepDogFlock->end(); sheepDogIter++)
 	{
 		// Modify the next step to be lying on a the circle surface that does not disturb the sheep
 		float sheepDog2LCM_Angle = atan2((*sheepDogIter)->position_t1.y - (*sheepDogIter)->Lambda_t.y, (*sheepDogIter)->position_t1.x - (*sheepDogIter)->Lambda_t.x);
-		//float sheepDog2LCM_radius = (*sheepDogIter)->position_t1.dist((*sheepDogIter)->Lambda_t);
-		/*Environment& env = Environment::getInstance();
-					float sheepDog_t1_2LCM_MinRadius = env.fN + safety_dist;*/
 
-		//int safety_dist = 0;
+		float furthestDist = 0;
 
-		//float	sheepDog_t1_2LCM_MinRadius = 0;
-		//if (circularPathPlanningMode == 0)
-		//{
-			//sheepDog_t1_2LCM_MinRadius = circularPathPlanningRadius;
-
-		//}
-		//else if (circularPathPlanningMode == 1)
-		//{
-			float furthestDist = 0;
-
-			SheepFlock::iterator sheepIter;
-			for (sheepIter = sheepFlock->begin(); sheepIter != sheepFlock->end(); sheepIter++)
+		/*SheepFlock::iterator sheepIter;
+		for (sheepIter = sheepFlock->begin(); sheepIter != sheepFlock->end(); sheepIter++)
+		{
+			if ((*sheepIter)->position_t.dist((*sheepDogIter)->Lambda_t) > furthestDist)
 			{
-				if ((*sheepIter)->position_t.dist((*sheepDogIter)->Lambda_t) > furthestDist)
-				{
-					furthestDist = (*sheepIter)->position_t.dist((*sheepDogIter)->Lambda_t);
-				}
-
+				furthestDist = (*sheepIter)->position_t.dist((*sheepDogIter)->Lambda_t);
 			}
-			Environment& env = Environment::getInstance();
-			
-			float sheepDog_t1_2LCM_MinRadius = std::max(furthestDist,env.R1)+env.R2+env.R3; //outter (3rd) circle radius
-		//}
+
+		}*/
+
+		for (int i = 0; i < (*sheepDogIter)->get_DetectedSheep().size(); i++)
+		{
+			if ((*sheepDogIter)->get_DetectedSheep()[i].sheepLastSeenLocation.dist((*sheepDogIter)->Lambda_t) > furthestDist)
+			{
+				furthestDist = (*sheepDogIter)->get_DetectedSheep()[i].sheepLastSeenLocation.dist((*sheepDogIter)->Lambda_t);
+			}
+
+		}
+
+		Environment& env = Environment::getInstance();
+
+		float sheepDog_t1_2LCM_MinRadius = std::max(furthestDist, env.R1) + env.R2 + env.R3; //outter (3rd) circle radius
+	//}
 		checkNotDisturbingSheep(sheepDog_t1_2LCM_MinRadius, (*sheepDogIter));
 
 	}
+
 }
 
 

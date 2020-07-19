@@ -66,6 +66,7 @@ float R_pi_beta=65;			// (65u)			& pi sensing range for beta
 float Ra_pi_pi=2;//			// (2u)				& pi collision avoidance range for pi
 float Rs_pi_pi = 20;//			// (20u)				& pi sensing range for pi
 float R_beta_beta = 10;// 10			// (2u)				& beta sensing range for beta
+float R_beta_pi = 65; //									& beta sensing range for pi
 int card_Omega_pi_pi =N-1; //maximum N-1
 int card_Omega_beta_pi = N ;  //maximum N
 float W_pi_pi=2;			// (2)				& pi repulsion strength from pi
@@ -90,8 +91,8 @@ bool scaleForceVisualization = true;
 int main(int argc, char *argv[])
 {
 
-	std::string ConfigFile = "..\\InputFiles\\Config.xml"; //set the default configuration1;;11 file name
-	std::string GraphicFile = "..\\InputFiles\\VisualizationOptions.xml"; //set the default filename
+	std::string ConfigFile = "../InputFiles/config.xml"; //set the default configuration1;;11 file name
+	std::string GraphicFile = "../InputFiles/VisualizationOptions.xml"; //set the default filename
 	if (argc>1)
 	{
 		ConfigFile = argv[1]; //if a new configuration file name is given then update the ConfigFile name
@@ -130,7 +131,7 @@ int main(int argc, char *argv[])
 	{
 		graphics = new Visualization();
 		
-		graphics->init(randomNumberSeed,std::string("Shepherding Simulation")+ConfigFile.substr(0, ConfigFile.length() - 4), scaleCalc, simSpeed, screenWIDTH, screenHEIGHT, fieldWidth, fieldHeight, N, M, R_pi_beta, Ra_pi_pi, Rs_pi_pi, R_beta_beta, W_pi_pi, W_beta_beta, W_pi_beta, W_pi_Lambda, W_pi_upsilon, W_e_pi_i, W_e_beta_j, S_t_beta_j, eta, card_Omega_pi_pi, card_Omega_beta_pi, WindowMarginSize + gLocX, WindowMarginSize + gLocY, paddockLength, paddockWidth, paddockON, CircularPathPlanningON,StallingON, StallingDistance, R2, R3, goalRadius, ForceRegulated, fNequation, DrivingPositionEq, CollectingPositionEq, SheepNeignborhoodSelection, ModulationDecayFactor, sheepInitializationStartingX+ WindowMarginSize, sheepInitializationStartingY+ WindowMarginSize, sheepInitializationXRange, sheepInitializationYRange, sheepInitializationPattern, sheepDogInitializationStartingX+ WindowMarginSize, sheepDogInitializationStartingY+ WindowMarginSize, sheepDogInitializationXRange, sheepDogInitializationYRange, MaximumNumSteps, obstaclesDensity, obstaclesRadius, CollisionAvoidanceOpponentsForceON, CollisionAvoidanceFriendsForceON, AttractionBehaviorForceON, CollisionAvoidanceStaticObstaclesForceON, JitteringForceON, scaleForceVisualization);
+		graphics->init(randomNumberSeed,std::string("Shepherding Simulation")+ConfigFile.substr(0, ConfigFile.length() - 4), scaleCalc, simSpeed, screenWIDTH, screenHEIGHT, fieldWidth, fieldHeight, N, M, R_pi_beta, Ra_pi_pi, Rs_pi_pi, R_beta_beta, R_beta_pi, W_pi_pi, W_beta_beta, W_pi_beta, W_pi_Lambda, W_pi_upsilon, W_e_pi_i, W_e_beta_j, S_t_beta_j, eta, card_Omega_pi_pi, card_Omega_beta_pi, WindowMarginSize + gLocX, WindowMarginSize + gLocY, paddockLength, paddockWidth, paddockON, CircularPathPlanningON,StallingON, StallingDistance, R2, R3, goalRadius, ForceRegulated, fNequation, DrivingPositionEq, CollectingPositionEq, SheepNeignborhoodSelection, ModulationDecayFactor, sheepInitializationStartingX+ WindowMarginSize, sheepInitializationStartingY+ WindowMarginSize, sheepInitializationXRange, sheepInitializationYRange, sheepInitializationPattern, sheepDogInitializationStartingX+ WindowMarginSize, sheepDogInitializationStartingY+ WindowMarginSize, sheepDogInitializationXRange, sheepDogInitializationYRange, MaximumNumSteps, obstaclesDensity, obstaclesRadius, CollisionAvoidanceOpponentsForceON, CollisionAvoidanceFriendsForceON, AttractionBehaviorForceON, CollisionAvoidanceStaticObstaclesForceON, JitteringForceON, scaleForceVisualization);
 		graphics->render();
 
 		WriteObstaclesFiles(StaticObstaclesOutputFile);
@@ -151,7 +152,7 @@ int main(int argc, char *argv[])
 		CLI *cli = nullptr;
 
 		cli = new CLI();
-		cli->init(randomNumberSeed, fieldWidth, fieldHeight, N, M, R_pi_beta, Ra_pi_pi, Rs_pi_pi, R_beta_beta, W_pi_pi, W_beta_beta, W_pi_beta, W_pi_Lambda, W_pi_upsilon, W_e_pi_i, W_e_beta_j, S_t_beta_j, eta, card_Omega_pi_pi, card_Omega_beta_pi, gLocX, gLocY, paddockLength, paddockWidth, paddockON, CircularPathPlanningON, StallingON, StallingDistance, R2, R3, goalRadius, ForceRegulated, fNequation, DrivingPositionEq, CollectingPositionEq, SheepNeignborhoodSelection, ModulationDecayFactor, sheepInitializationStartingX, sheepInitializationStartingY, sheepInitializationXRange, sheepInitializationYRange, sheepInitializationPattern, sheepDogInitializationStartingX, sheepDogInitializationStartingY, sheepDogInitializationXRange, sheepDogInitializationYRange, MaximumNumSteps, obstaclesDensity, obstaclesRadius);
+		cli->init(randomNumberSeed,  fieldWidth, fieldHeight, N, M, R_pi_beta, Ra_pi_pi, Rs_pi_pi, R_beta_beta,  R_beta_pi, W_pi_pi, W_beta_beta, W_pi_beta, W_pi_Lambda, W_pi_upsilon, W_e_pi_i, W_e_beta_j, S_t_beta_j, eta, card_Omega_pi_pi, card_Omega_beta_pi, gLocX, gLocY, paddockLength, paddockWidth, paddockON, CircularPathPlanningON, StallingON, StallingDistance, R2, R3, goalRadius, ForceRegulated, fNequation, DrivingPositionEq, CollectingPositionEq, SheepNeignborhoodSelection, ModulationDecayFactor, sheepInitializationStartingX, sheepInitializationStartingY, sheepInitializationXRange, sheepInitializationYRange, sheepInitializationPattern, sheepDogInitializationStartingX, sheepDogInitializationStartingY, sheepDogInitializationXRange, sheepDogInitializationYRange, MaximumNumSteps, obstaclesDensity, obstaclesRadius);
 		WriteObstaclesFiles(StaticObstaclesOutputFile);
 
 		while (cli->running()) //while running
@@ -206,6 +207,7 @@ void WriteOutFiles(std::ofstream & outputHeader_file, std::ofstream&  outputConf
 	outputConfigfile << "S_t_beta_j: " << S_t_beta_j << std::endl;
 	outputConfigfile << "eta: " << eta << std::endl;
 	outputConfigfile << "R_beta_beta: " << R_beta_beta << std::endl;
+	outputConfigfile << "R_beta_pi: " << R_beta_pi << std::endl;
 	outputConfigfile << "W_beta_beta: " << W_beta_beta << std::endl;
 	//outputConfigfile << "Circular Path Planning On : " << circularPathPlanningON ? "true" : "false" << std::endl;
 	outputConfigfile << "DrivingPositionEq"<< DrivingPositionEq << std::endl;
@@ -419,8 +421,6 @@ void loadDOMConfiguration(std::string filename)
 		CHK_HR(pNode->get_text(&bstrNodeValue));
 		//printf("\t%S\n", bstrNodeValue);
 		gLocX = _wtoi(bstrNodeValue);
-
-
 
 		SysFreeString(bstrNodeValue);
 		CHK_HR(pNodes->get_item(1, &pNode));
@@ -679,6 +679,11 @@ void loadDOMConfiguration(std::string filename)
 
 		CHK_HR(pNodes->get_item(16, &pNode));
 		CHK_HR(pNode->get_text(&bstrNodeValue));
+		R_beta_pi = std::stof(bstrNodeValue);
+		SysFreeString(bstrNodeValue);
+
+		CHK_HR(pNodes->get_item(17, &pNode));
+		CHK_HR(pNode->get_text(&bstrNodeValue));
 		W_beta_beta = std::stof(bstrNodeValue);
 		SysFreeString(bstrNodeValue);
 
@@ -848,6 +853,7 @@ void loadDOMConfiguration(std::string filename)
 		printf("S_t_beta_j: %.2f\n", S_t_beta_j);
 		printf("eta: %.2f\n", eta);
 		printf("R_beta_beta: %.2f\n", R_beta_beta);
+		printf("R_beta_pi: %.2f\n", R_beta_pi);
 		printf("W_beta_beta: %.2f\n", W_beta_beta);
 		printf("DrivingPositionEq: %d\n",  DrivingPositionEq);
 		printf("CollectingPositionEq: %d\n", CollectingPositionEq);

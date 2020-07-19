@@ -6,22 +6,22 @@
 	</config>
 	<config category="Screen Configurations">
 		<!--Screen Configurations in pixel unit-->
-		<screenWidthPixels>800</screenWidthPixels>
+		<screenWidthPixels>600</screenWidthPixels>
 		<!--// Not in use if Visualisation is OFF -->
-		<screenHeightPixels>800</screenHeightPixels>
+		<screenHeightPixels>600</screenHeightPixels>
 		<!--// Not in use if Visualisation is OFF -->
 	</config>
 	<config category="Show Sheep Forces">
 		<!--Use 1 for the forces that you want to display, and 0 for not showin this force-->
-		<CollisionAvoidanceOpponentsForceON>1</CollisionAvoidanceOpponentsForceON>
+		<CollisionAvoidanceOpponentsForceON>0</CollisionAvoidanceOpponentsForceON>
 		<!--// Display escaping form sheepdog(s) force (Black) -->
-		<CollisionAvoidanceFriendsForceON>1</CollisionAvoidanceFriendsForceON>
+		<CollisionAvoidanceFriendsForceON>0</CollisionAvoidanceFriendsForceON>
 		<!--// Display force toward collision avoidance from other sheep (Orange) -->
-		<AttractionBehaviorForceON>1</AttractionBehaviorForceON>
+		<AttractionBehaviorForceON>0</AttractionBehaviorForceON>
 		<!--// Display attraction to local centre of mass force (Green)-->
 		<CollisionAvoidanceStaticObstaclesForceON>1</CollisionAvoidanceStaticObstaclesForceON>
 		<!--// Display force toward collision avoidance from static obstacles (Purple)-->
-		<JitteringForceON>1</JitteringForceON>
+		<JitteringForceON>0</JitteringForceON>
 		<!--// Display Jittering Force (Blue)-->
 		<ScaleForceVisualization> 1 </ScaleForceVisualization>
 		<!-- Increase the size of the arrow according to the length of the force vector, it applies to all the visualized forces. If 0, all visualized forces will have the same arrow size regardless of their strength -->
