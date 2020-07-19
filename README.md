@@ -98,7 +98,7 @@ You can also make your own copy of the *“Config.xml”* file, and edit it. The
 ##### Steps:
 1. Download the project, or clone it using the command
 
-*git clone https://github.com/Hebaelfiqi/Shepherding.git*
+*git clone https://github.com/husseinaabbass/Shepherding.git*
 
 2. Download and unpack the SDL2 development libraries (the .zip files with VC in the name) from:
    -   http://www.libsdl.org/download-2.0.php
