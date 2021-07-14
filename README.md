@@ -10,9 +10,9 @@ Shepherding Project
 
 This project aims at providing a library for shepherding behaviours that can be used by a multi-agent system to model context-aware swarm intelligence. The shepherding behaviours library shall include different behaviours by different actors in a shepherding environment, which allows flexibility in setting up different agents with different behavioural characteristics. A simulation environment is also provided to model how these behaviours can be imported and used by the different agents. Concepts, and model design, and details are found in a number of publications by our research team including:
 
-[1] xxxx
+[1] El-Fiqi, H., Campbell, B., Elsayed, S., Perry, A., Singh, H. K., Hunjet, R., & Abbass, H. A. (2020). The Limits of Reactive Shepherding Approaches for Swarm Guidance. IEEE Access, 8, 214658-214671.
 
-[2] yyyy
+[2] El-Fiqi, H., Campbell, B., Elsayed, S., Perry, A., Singh, H. K., Hunjet, R., & Abbass, H. (2020, July). A preliminary study towards an improved shepherding model. In Proceedings of the 2020 Genetic and Evolutionary Computation Conference Companion (pp. 75-76).
 
 ## Project File Structure
 
