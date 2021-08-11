@@ -1,8 +1,7 @@
 
 
 
-# Shepherding
-Shepherding Project
+# Shepherding Library for Swarm Guidance
 
 
 
